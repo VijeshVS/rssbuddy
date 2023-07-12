@@ -10,21 +10,25 @@
     <br>
     <br>
 
-    <form action="app.py" method="post">
-
-    <a href="./SML" class="btn btn-warning btn-lg  active" style="margin-left: 50px;" role="button" aria-pressed="true">SML</a>
-    <a href="./Pavitra" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">Pavitra</a>
-    <a href="./GCC" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">GCC</a>
-
 
     <div class="container">
+
         <form method="POST" class="form-register" style="color:white;">
+
+        {{ select_form.csrf_token }}
+        {{ select_form.option_entry.label() }}
+        {{ select_form.option_entry(class="form-control", placeholder="Product") }}
+        <br>
+        {{ select_form.go(class='btn btn-lg btn-primary')}}
+            <br>
+            <br>
+
             {{ optionform.csrf_token }}
     
         {{ optionform.option_name.label() }}
         {{ optionform.option_name(class="form-control", placeholder="Party Name") }}
-    
-        {{ optionform.submit(class='btn btn-lg btn-block btn-primary')}}
+            <br>
+        {{ optionform.new_entry(class='btn btn-lg  btn-primary')}}
     
         </form>
     </div>
