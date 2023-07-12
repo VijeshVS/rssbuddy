@@ -1,43 +1,46 @@
 from rssbuddy import app
 from flask import render_template , url_for , redirect , request 
-from rssbuddy.models import SML
+from rssbuddy.models import party_record , Records
 from rssbuddy import db
 from rssbuddy.forms import EnterInfo , OptionForm
 
 
 
-@app.route('/')
+@app.route('/', methods = ['GET','POST'])
 def home_page():
-    return render_template('home.html')
+    form = EnterInfo()
+    
+    if request.method == 'POST' :
+        party_name = form.option_entry.data
+        return redirect(url_for('records', party_name=party_name))
+
+    parties = party_record.query.all()
+    form.option_entry.choices = [(party.name, party.name) for party in parties]    
+    return render_template('home.html',form=form)
+
+
 
 @app.route('/accounts/',methods = ['POST','GET'])
 def account():
-    form = EnterInfo()
     optionform = OptionForm()
+
+
+    if request.method == 'POST' and optionform.validate():
+        temp_party = party_record(name = optionform.option_name.data )
+        db.session.add(temp_party)
+        db.session.commit()
+        return redirect(url_for('account'))
     
 
-    return render_template('party.html' , optionform=optionform , select_form=form)
-
-@app.route('/accounts/SML')
-def sml_accounts():
-    totalvolume = 0
-    totalamount = 0 
-
-    for item in SML.query.all():
-        totalvolume = totalvolume + item.Volume
-
-    for item in SML.query.all():
-        totalamount = totalamount + item.Amount       
-
-    sorted_rows = SML.query.order_by(SML.Date.asc()).all()
-
-    return render_template('SML.html' , SMLAcc=sorted_rows, totalvolume=totalvolume,totalamount=totalamount)
+    return render_template('party.html' , optionform=optionform )
 
 @app.route('/accounts/add' , methods = ['POST','GET'])
 def adding_acc():
-    form = EnterInfo()
-    if request.method == 'POST' and form.validate():
-        if form.option_entry.data == 'option1' :
+    form = EnterInfo()  
+    options = party_record.query.all()
+    form.option_entry.choices = [(option.name , option.name) for option in options]
+
+    if request.method == 'POST' :
             if form.product_entry.data == 'option1':
                 temp_product = 'Diesel'
             else:
@@ -48,7 +51,8 @@ def adding_acc():
             else:
                 Rate = 101.06       
 
-            created_field = SML(
+            created_field = Records(
+                Party = form.option_entry.data,
                 Date = form.Date.data,
                 VehicleNo = form.VehicleNo.data,
                 Volume = form.Volume.data,
@@ -56,13 +60,23 @@ def adding_acc():
                 Rate = Rate,
                 Product = temp_product
             )
+            print(created_field.Rate)
             db.session.add(created_field)
             db.session.commit()
             return redirect(url_for('adding_acc'))
-        
 
-            
     return render_template('add.html',form=form)
+
+
+
+@app.route('/records', methods = ['POST','GET'])
+def records():
+    partyname = request.args.get('party_name')
+    bill_records = db.session.query(Records).filter_by(Party=partyname).all()
+
+    return render_template('billrecords.html',bill_records=bill_records,partyname=partyname)
+    
+
 
 
 

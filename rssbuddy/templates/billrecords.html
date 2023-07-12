@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>SML</title>
+    <title>{{partyname}}</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     
 </head>
 <body>
-    <h1 style="text-align: center;" >SML Accounts </h1>
+    <h1 style="text-align: center;" > {{ partyname }} Accounts </h1>
     <br>
     <br>
 
@@ -26,13 +26,13 @@
         </thead>
         <tbody>
           <tr>
-            {% for sml in SMLAcc %}
-            <td>{{ sml.Date }}</td>
-            <td>{{ sml.VehicleNo }}</td>
-            <td>{{ sml.Product }}</td>
-            <td>{{ sml.Volume }}</td>
-            <td>{{ sml.Rate }}</td>
-            <td>{{ sml.Amount }}</td>
+            {% for bill in bill_records %}
+            <td>{{ bill.Date }}</td>
+            <td>{{ bill.VehicleNo }}</td>
+            <td>{{ bill.Product }}</td>
+            <td>{{ bill.Volume }}</td>
+            <td>{{ bill.Rate }}</td>
+            <td>{{ bill.Amount }}</td>
             <td> <button type="button" class="btn btn-success">Update</button> </td>
             <td> <button type="button" class="btn btn-danger">Delete</button> </td>
           </tr>
@@ -42,9 +42,9 @@
             <th scope="col">    </th>
             <th scope="col">   </th>
             <th scope="col">Total</th>
-            <th scope="col">{{ totalvolume }}</th>
+            <th scope="col">totalvolume</th>
             <th scope="col">   </th>
-            <th scope="col">{{ totalamount }}</th>
+            <th scope="col">totalamount</th>
             <th scope="col">   </th>
             <th scope="col">   </th>
           </tr>

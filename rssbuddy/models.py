@@ -1,5 +1,4 @@
 from rssbuddy import db
-from wtforms import FlaskForm
 
 class Records(db.Model):
     Party = Date = db.Column(db.String(length = 10), nullable=False)
@@ -11,7 +10,7 @@ class Records(db.Model):
     Product = db.Column(db.String(length = 10), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
 
-class party_record(db.model)   :
+class party_record(db.Model)   :
     name = db.Column(db.String(length = 10))
     ID = db.Column(db.Integer(), primary_key=True)
 

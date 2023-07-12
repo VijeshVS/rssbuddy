@@ -10,8 +10,7 @@ class EnterInfo(FlaskForm):
     Rate = StringField(label  = 'Rate: ')
     submit = SubmitField(label = 'ADD')
     go = SubmitField(label = 'GO')
-    option_entry = SelectField(label = 'Party' , 
-                              choices=[('option1', 'SML'), ('option2', 'Pavitra'), ('option3', 'GCC'),('option4',''),('option5',''),('option6',''),('option7',''),('option8',''),('option9',''),('option10','')])
+    option_entry = SelectField(label = 'Party List: ', choices=[])
     product_entry = SelectField(label = 'Product' , choices=[('option1', 'Diesel') , ('option2', 'Petrol')])
 
 class OptionForm(FlaskForm):
