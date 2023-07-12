@@ -6,25 +6,31 @@
     
 </head>
 <body>
-    <h1 style="text-align: center;">Welcome to RSS Buddy </h1>
+    <br>
+    <br>
+    <br>
+    <br>
     <br>
     <br>
     <div class="container">
     
-    <a href="/accounts" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Accounts</a>
-    <a href="/accounts/add" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">Add Bill</a>
+    <a href="/accounts" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Add new party</a>
+    <a href="/accounts/add" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">Add new Bill</a>
+    <a href="/accounts/amtrec" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">Add Amount Received</a>
     </div>
     <br>
     <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    
     <div class="container">
         <h2 style="color: yellow;">Bill Records</h2>
     <form method="POST" class="form-register" style="color:white;">
+        {{ opform.csrf_token }}
+
+        {{ opform.date1.label() }}
+        {{ opform.date1(class="form-control", placeholder="From") }}
+
+        {{ opform.date2.label() }}
+        {{ opform.date2(class="form-control", placeholder="To") }}
+
 
         {{ form.csrf_token }}
 
@@ -39,8 +45,11 @@
 </div>
     <style>
         body {
-            color:ivory;
-            background-color: #2C3539;
+            color:red;
+            font-weight: bolder;
+            background-image: url("https://static.vecteezy.com/system/resources/previews/006/852/804/original/abstract-blue-background-simple-design-for-your-website-free-vector.jpg");
+            background-size: cover;
+            background-repeat: no-repeat;
         }
 
     </style>
