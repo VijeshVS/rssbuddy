@@ -11,3 +11,9 @@ class EnterInfo(FlaskForm):
     submit = SubmitField(label = 'ADD')
     option_entry = SelectField(label = 'Party' , choices=[('option1', 'SML'), ('option2', 'Pavitra'), ('option3', 'GCC')])
     product_entry = SelectField(label = 'Product' , choices=[('option1', 'Diesel') , ('option2', 'Petrol')])
+
+class OptionForm(FlaskForm):
+    option_name = StringField(label  = 'Party: ')
+    option_value = option_name
+    new_entry =  submit = SubmitField(label = 'New Entry')
+

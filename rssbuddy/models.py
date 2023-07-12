@@ -9,5 +9,6 @@ class SML(db.Model):
     Product = db.Column(db.String(length = 10), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
 
+    
 
 

@@ -1,8 +1,8 @@
 from rssbuddy import app
-from flask import render_template , url_for , redirect , request , datetime
+from flask import render_template , url_for , redirect , request 
 from rssbuddy.models import SML
 from rssbuddy import db
-from rssbuddy.forms import EnterInfo
+from rssbuddy.forms import EnterInfo , OptionForm
 
 @app.route('/')
 def home_page():
@@ -10,7 +10,12 @@ def home_page():
 
 @app.route('/accounts/')
 def account():
-    return render_template('party.html')
+    optionform = OptionForm()
+    if request.method == 'POST' and optionform.validate():
+        print("Hello")  
+        redirect(url_for('account'))
+
+    return render_template('party.html' , optionform=optionform)
 
 @app.route('/accounts/SML')
 def sml_accounts():
@@ -30,6 +35,7 @@ def sml_accounts():
 @app.route('/accounts/add' , methods = ['POST','GET'])
 def adding_acc():
     form = EnterInfo()
+
     if request.method == 'POST' and form.validate():
         if form.option_entry.data == 'option1' :
             if form.product_entry.data == 'option1':
