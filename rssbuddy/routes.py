@@ -1,8 +1,8 @@
 from rssbuddy import app
 from flask import render_template , url_for , redirect , request 
-from rssbuddy.models import party_record , Records , AmountRecord
+from rssbuddy.models import party_record , Records , AmountRecord , CNG_record
 from rssbuddy import db
-from rssbuddy.forms import EnterInfo , OptionForm , AmtRec
+from rssbuddy.forms import EnterInfo , OptionForm , AmtRec , cngform
 
 
 
@@ -108,3 +108,50 @@ def amount_rec():
     
     return render_template('amtrec.html',amt_form=amt_form,form=form)
 
+@app.route('/cng/addcng',methods = ['POST', 'GET'])
+def add_cng():
+    Cngform = cngform()
+    if request.method == 'POST':
+        cngtotal = float(Cngform.aside.data)+float(Cngform.bside.data)
+        cngrate = float(Cngform.Rate.data)
+        temp_record = CNG_record(cngdate = Cngform.Date.data,
+                                 aside = Cngform.aside.data,
+                                 bside = Cngform.bside.data,
+                                 total = float(Cngform.aside.data)+float(Cngform.bside.data),
+                                 cngrate = float(Cngform.Rate.data),
+                                 cngamt = cngrate*cngtotal)
+        db.session.add(temp_record)
+        db.session.commit()
+        return redirect(url_for('add_cng'))
+    return render_template('cngadd.html',cngform=Cngform)
+
+
+@app.route('/cng/',methods = ['POST','GET'])
+
+def cng_home():
+    opform = OptionForm()
+    if request.method == 'POST':
+        cngdate1 = opform.date1.data
+        cngdate2 = opform.date2.data
+        return redirect(url_for('cng_records',cngdate1=cngdate1,cngdate2=cngdate2))
+
+    return render_template('cnghome.html',opform=opform)    
+
+
+
+@app.route('/cngrecords', methods = ['POST','GET'])
+def cng_records():
+    fromdate = request.args.get('cngdate1')
+    todate = request.args.get('cngdate2')
+    bill_records = CNG_record.query.filter(
+    CNG_record.cngdate.between(fromdate, todate))
+    # bill_records = db.session.query(Records).filter_by(Party=partyname).all()
+    totalvolume=0
+    totalamount=0
+    
+    for bill in bill_records:
+        totalvolume += float(bill.total)
+        totalamount += float(bill.cngamt)
+
+    return render_template('cngbillrecords.html',bill_records=bill_records,totalvolume=totalvolume,totalamount=totalamount)
+    

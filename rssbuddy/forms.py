@@ -18,8 +18,16 @@ class OptionForm(FlaskForm):
     new_entry = SubmitField(label = 'New Entry')
     date1 = DateField(label = 'From: ')
     date2 = DateField(label = 'To: ')
+    go = SubmitField(label = 'GO')
 
 class AmtRec(FlaskForm):
     Date = DateField(label = 'Date: ')
     Amount = StringField(label = 'Amount Received: ')
+    submit = SubmitField(label = 'ADD')
+
+class cngform(FlaskForm):
+    Date = DateField(label = 'Date: ')
+    aside = StringField(label = 'A side reading: ')
+    bside = StringField(label = 'B side reading: ')
+    Rate = StringField(label  = 'Rate: ')
     submit = SubmitField(label = 'ADD')

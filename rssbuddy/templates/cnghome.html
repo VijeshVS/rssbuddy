@@ -14,16 +14,12 @@
     <br>
     <div class="container">
     
-    <a href="/accounts" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Add new party</a>
-    <a href="/accounts/add" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">Add new Bill</a>
-    <a href="/accounts/amtrec" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">Add Amount Received</a>
-    <a href="/cng" class="btn btn-warning btn-lg active" style="margin-left: 50px;" role="button" aria-pressed="true">CNG</a>
-    
+    <a href="/cng/addcng" class="btn btn-primary btn-lg active"  role="button" aria-pressed="true">Add new bill</a>
     </div>
     <br>
     <br>
     <div class="container">
-        <h2 style="color: yellow;">Bill Records</h2>
+        <h2 style="color: yellow;">CNG Bill Records</h2>
     <form method="POST" class="form-register" style="color:white;">
         {{ opform.csrf_token }}
 
@@ -33,18 +29,15 @@
         {{ opform.date2.label() }}
         {{ opform.date2(class="form-control", placeholder="To") }}
 
-
-        {{ form.csrf_token }}
-
-        {{ form.option_entry.label() }}
-        {{ form.option_entry(class="form-control", placeholder="Party") }}
         <br>
-        
-        {{ form.go(class='btn btn-lg  btn-primary')}}
+
+        {{ opform.go(class='btn btn-lg  btn-primary')}}
 
     </form>
 
 </div>
+
+<a href="../" class="btn btn-danger btn-lg active" style="margin-left: 50px; margin-top:50px" role="button" aria-pressed="true">Back to Home</a>
     <style>
         body {
             color:red;
