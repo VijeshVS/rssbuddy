@@ -23,6 +23,7 @@ def home_page():
 
 
 
+
 @app.route('/accounts/',methods = ['POST','GET'])
 def account():
     optionform = OptionForm()
@@ -39,6 +40,7 @@ def account():
 
 @app.route('/accounts/add' , methods = ['POST','GET'])
 def adding_acc():
+    # Records.instantiate_from_csv()
     form = EnterInfo()  
     options = party_record.query.all()
     form.option_entry.choices = [(option.name , option.name) for option in options]
