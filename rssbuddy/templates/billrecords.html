@@ -10,9 +10,10 @@
     <br>
     <br>
 
-
-      <table class="table table-dark">
-        <thead class="thead-light">
+      <div class="firstlinebox">
+        <div class="div-scroll">
+      <table class="table table-bordered" style="color:white">
+        <thead >
           <tr>
             <th scope="col">Date</th>
             <th scope="col">Vehicle No.</th>
@@ -20,37 +21,106 @@
             <th scope="col">Volume</th>
             <th scope="col">Rate</th>
             <th scope="col">Amount</th>
-            <th scope="col">Options </th>
-            <th scope="col"> </th>
           </tr>
         </thead>
         <tbody>
           <tr>
             {% for bill in bill_records %}
-            <td>{{ bill.Date }}</td>
+            <td>{{ bill.Date.strftime('%d/%m/%Y') }}</td>
             <td>{{ bill.VehicleNo }}</td>
             <td>{{ bill.Product }}</td>
-            <td>{{ bill.Volume }}</td>
-            <td>{{ bill.Rate }}</td>
-            <td>{{ bill.Amount }}</td>
-            <td> <button type="button" class="btn btn-success">Update</button> </td>
-            <td> <button type="button" class="btn btn-danger">Delete</button> </td>
+            <td>{{ bill.Volume }} L</td>
+            <td>{{ bill.Rate }} ₹</td>
+            <td>{{ bill.Amount }} ₹</td>
           </tr>
           {% endfor %}
-          <thead class="thead-light">
+          <thead class="table table-bordered" style="color: white;">
           <tr>
             <th scope="col">    </th>
             <th scope="col">   </th>
             <th scope="col">Total</th>
-            <th scope="col">{{totalvolume}}</th>
+            <th scope="col">{{totalvolume}} L</th>
             <th scope="col">   </th>
-            <th scope="col">{{totalamount}}</th>
+            <th scope="col">{{totalamount}} ₹</th>
             <th scope="col">   </th>
             <th scope="col">   </th>
           </tr>
         </thead>
         </tbody>
       </table>
+    </div>
+    </div>
+    <br>
+    <br>
+    <div class="firstlinebox">
+      <div class="div-scroll">
+    <table class="table table-bordered" style="color: white;">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Date</th>
+          <th scope="col">Amount Received</th>
+        </tr>
+      </thead>
+      <tbody >
+        <tr>
+          {% for bill in amt_bills %}
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td> </td>
+          <td > {{ bill.AmtDate}} </td>
+          <td> {{bill.Amount}} ₹ </td>
+        </tr>
+        {% endfor %}
+        <thead class="table table-bordered" style="color: white;">
+        <tr>
+
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+          <th scope="col">Total</th>
+          <th scope="col">{{amt_bills_total}} ₹</th>
+   
+        </tr>
+      </thead>
+      </tbody>
+    </table>
+  </div>
+  </div>
+<br>
+<br>
+  <div class="container" style="margin-left: 760px;">
+    <div class="card border-primary mb-3" style="max-width: 18rem;">
+      <div class="card-header" style="color: green;text-align:center;">{{partyname}}</div>
+      <div class="card-body text-primary">
+        <h5 class="card-title" style="color: red;text-align:center;">Balance</h5>
+        <p class="card-text, pulse-animation" style="text-align: center; font-size:larger">{{balance}} ₹</p>
+      </div>
+    </div>
+  </div>
+
+    <br>
+    <br>
 
       <a href="./" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Back to Home</a>
       <br>
@@ -59,12 +129,46 @@
 
     
     <style>
-        body {
-          color:ivory;
-          background-image: url("https://wallpaperaccess.com/full/5580641.jpg");
-          background-size: cover;
-          background-repeat: no-repeat
+
+      .div-scroll, table{   
+        margin-left: 120px;   
+        height: 500px;
+        width: 1000px;
+        border-radius: 10px;
+        overflow-y: scroll;
+        overflow-x: hidden;
         }
+
+        body{
+          background-color: #2C3539;
+          color: white;
+        }
+
+        .firstlinetablebox{
+          display: flex;
+          width:95%;
+          height: 320px;
+          margin-left: 20px;
+          margin-top: 20px;
+      }
+
+      .pulse-animation {
+        animation: pulse 1.5s ease-in-out infinite;
+      }
+      
+      @keyframes pulse {
+        0% {
+          transform: scale(1); /* Start with original size */
+        }
+        50% {
+          transform: scale(1.1); /* Scale up by 10% at 50% mark */
+        }
+        100% {
+          transform: scale(1); /* Return to original size */
+        }
+      }
+
+
 
     </style>
 </body>

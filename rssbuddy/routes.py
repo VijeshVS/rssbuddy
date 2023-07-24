@@ -3,7 +3,7 @@ from flask import render_template , url_for , redirect , request
 from rssbuddy.models import party_record , Records , AmountRecord , CNG_record
 from rssbuddy import db
 from rssbuddy.forms import EnterInfo , OptionForm , AmtRec , cngform
-
+from datetime import datetime
 
 
 @app.route('/', methods = ['GET','POST'])
@@ -14,6 +14,13 @@ def home_page():
     if request.method == 'POST' :
         date1 = opform.date1.data
         date2 = opform.date2.data
+        print(date1)
+        if date1 == None:
+            date1 = datetime.strptime('1-06-2005', '%d-%m-%Y').date()
+
+        if date2 == None:
+            date2 = datetime.strptime('1-06-2050', '%d-%m-%Y').date()    
+            
         party_name = form.option_entry.data
         return redirect(url_for('records', party_name=party_name,date1=date1,date2=date2))
 
@@ -40,7 +47,7 @@ def account():
 
 @app.route('/accounts/add' , methods = ['POST','GET'])
 def adding_acc():
-    # Records.instantiate_from_csv()
+    #Records.instantiate_from_csv()
     form = EnterInfo()  
     options = party_record.query.all()
     form.option_entry.choices = [(option.name , option.name) for option in options]
@@ -79,20 +86,40 @@ def records():
     partyname = request.args.get('party_name')
     fromdate = request.args.get('date1')
     todate = request.args.get('date2')
+    
+    amt_bills = AmountRecord.query.filter(AmountRecord.AmtParty == partyname)
+
+    amt_bills_total=0
+
+    for amt in amt_bills:
+        amt_bills_total += amt.Amount
+
+    for bill in amt_bills:
+        bill.AmtDate = datetime.strptime(bill.AmtDate,'%Y-%m-%d').date()
+        db.session.commit()    
+    
+
     bill_records = Records.query.filter(
     Records.Date.between(fromdate, todate),
     Records.Party == partyname)
     # bill_records = db.session.query(Records).filter_by(Party=partyname).all()
     totalvolume=0
     totalamount=0
-    
+
+
+
     for bill in bill_records:
         totalvolume += bill.Volume
         totalamount += bill.Amount
 
-    return render_template('billrecords.html',bill_records=bill_records,partyname=partyname,totalvolume=totalvolume,totalamount=totalamount)
+    balance = float(totalamount) - float(amt_bills_total)     
+
+    return render_template('billrecords.html',
+                           bill_records=bill_records,partyname=partyname,
+                           totalvolume=totalvolume,totalamount=totalamount,
+                           amt_bills_total=amt_bills_total,amt_bills=amt_bills,balance=balance)
     
-@app.route('/accounts/amtrec')
+@app.route('/accounts/amtrec',methods = ['POST','GET'])
 def amount_rec():
     amt_form = AmtRec()
     form = EnterInfo()
@@ -131,6 +158,13 @@ def add_cng():
 @app.route('/cng/',methods = ['POST','GET'])
 
 def cng_home():
+
+    hello = Records.query.all()
+    
+    for bill in hello:
+        bill.Amount = bill.Volume * bill.Rate
+        db.session.commit()
+
     opform = OptionForm()
     if request.method == 'POST':
         cngdate1 = opform.date1.data
@@ -155,5 +189,7 @@ def cng_records():
         totalvolume += float(bill.total)
         totalamount += float(bill.cngamt)
 
-    return render_template('cngbillrecords.html',bill_records=bill_records,totalvolume=totalvolume,totalamount=totalamount)
+    return render_template('cngbillrecords.html',
+                           bill_records=bill_records,totalvolume=totalvolume,
+                           totalamount=totalamount)
     
