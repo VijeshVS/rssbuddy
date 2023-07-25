@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block homeactive %}
+    <li class="nav-item active">
+    {% endblock %}
+    {% block contents%}
+    <br><br><br><br><br>
+    
+    
+
+    <div class="container">
+        <center>
+            <img src="https://companieslogo.com/img/orig/HINDPETRO.NS-6dfea446.png?t=1604067036" 
+            class="img_logo">
+        </center>
+        <br>
+        <h1 style="text-align: center;color:yellow">RSS Buddy</h1>
+        <br>
+        <h5 style="text-align: center;color:aqua">Track your fuel bills, save more, and drive smarter. Manage expenses with ease, add and update bills hassle-free!</h5>
+        <br>
+        <center><a role="button" href="{{url_for('home_page')}}" class="btn btn-outline-success" aria-pressed="true" > Get Started </a> </center>
+    </div>
+
+
+    {% endblock %}

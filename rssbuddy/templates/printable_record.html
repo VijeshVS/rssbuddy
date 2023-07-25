@@ -1,0 +1,96 @@
+
+<html lang="en">
+    <title> Print Record </title>
+<head>
+    <style>
+        
+        @import url('https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap');
+
+
+   body {
+       color: black;
+       background-color: ivory ;
+       font-family: 'REM', sans-serif;
+   }
+
+   .img_logo{
+       width: 100px;
+       height: 100px;
+       border-radius: 100px;
+   }
+   
+   table {
+     border-collapse: collapse;
+     width: 80%;
+ }
+ 
+ th, td {
+     border: 1px solid black;
+     padding: 8px;
+ }
+ 
+ th {
+     background-color: red;
+ }    
+
+ .tablerec{
+  width:40%;
+  margin-left: 490px;
+ }
+
+ .img_logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 70px;
+}
+
+    </style>
+</head>
+<body>
+    <br>
+    <center>
+        <img src="https://companieslogo.com/img/orig/HINDPETRO.NS-6dfea446.png?t=1604067036" 
+        class="img_logo">
+    </center>
+    <h2 style="font-weight:bolder;text-align:center;" > Rai Service Station </h2>
+    <center> <h4>{{partyname}} Bills</h4> </center>
+    <center>
+
+      <table>
+        <thead>
+          <tr>
+            <th scope="col">Date</th>
+            <th scope="col">Vehicle No.</th>
+            <th scope="col">Product</th>
+            <th scope="col">Volume</th>
+            <th scope="col">Rate</th>
+            <th scope="col">Amount</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            {% for bill in bill_records %}
+            <td>{{ bill.Date.strftime('%d/%m/%Y') }}</td>
+            <td>{{ bill.VehicleNo }}</td>
+            <td>{{ bill.Product }}</td>
+            <td>{{ bill.Volume }} L</td>
+            <td>{{ bill.Rate }} ₹</td>
+            <td>{{ bill.Amount }} ₹</td>
+          </tr>
+          {% endfor %}
+
+          <tr>
+            <td></td>
+            <td></td>
+            <td style="background-color:aqua">Total</td>
+            <td style="background-color:aqua">{{ totalvolume }} L</td>
+            <td style="background-color:aqua"></td>
+            <td style="background-color:aqua">{{ totalamount }} ₹</td>
+          </tr>
+          </tbody>
+          </table>
+
+        </center>
+
+</body>
+</html>

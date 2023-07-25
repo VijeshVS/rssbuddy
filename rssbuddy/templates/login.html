@@ -1,0 +1,43 @@
+
+
+{% extends 'base.html' %}
+{% block title %}
+Login
+{% endblock %}
+{% block loginactive %}
+            <li class="nav-item active">
+            {% endblock %}  
+        {% block contents%}
+
+    <br>
+<br>
+    <center>
+        <img src="https://companieslogo.com/img/orig/HINDPETRO.NS-6dfea446.png?t=1604067036" class="img_logo">
+    </center>           
+
+
+<div class="container">
+
+    <form method="POST" class="form-register" style="color:white;">
+
+        {{ loginform.csrf_token }}
+        <br>
+        <h1 style="color: yellow;" class="h3 mb-3 font-weight-normal" >
+            Please login to your account
+        </h1>
+    {{ loginform.username.label() }}
+    {{ loginform.username(class="form-control", placeholder="User Name") }}
+
+
+    {{ loginform.password.label() }}
+    {{ loginform.password(class="form-control", placeholder="Password") }}
+   <br>
+    <br>
+    <br>
+        
+    {{ loginform.submit(class='btn btn-lg btn-block btn-primary')}}
+
+    </form>
+</div>
+
+{% endblock %}  

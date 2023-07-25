@@ -1,15 +1,19 @@
-from rssbuddy import db
+from rssbuddy import db , bcrypt
 import csv
+from flask_login import UserMixin 
+from rssbuddy import login_manager
+
 
 class Records(db.Model):
-    Party = db.Column(db.String(length = 10), nullable=False)
     ID = db.Column(db.Integer(), primary_key=True)
+    Party = db.Column(db.String(length = 20), nullable=False)
     Date = db.Column(db.Date(), nullable=False)
-    VehicleNo = db.Column(db.String(length = 20))
+    VehicleNo = db.Column(db.String(length = 30))
     Volume = db.Column(db.Integer(), nullable=False)
     Rate = db.Column(db.Integer(), nullable=False)
-    Product = db.Column(db.String(length = 10), nullable=False)
+    Product = db.Column(db.String(length = 15), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
+
 
 '''
     @classmethod 
@@ -34,27 +38,45 @@ class Records(db.Model):
 
              '''          
 
-class party_record(db.Model)   :
-    name = db.Column(db.String(length = 10))
+class party_record(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
+    name = db.Column(db.String(length = 20))
 
 class AmountRecord(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
-    AmtDate = db.Column(db.String(length = 10), nullable=False)
+    AmtDate = db.Column(db.Date(), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
-    AmtParty =  db.Column(db.String(length = 10), nullable=False)
+    AmtParty = db.Column(db.String(length = 20), nullable=False)
 
 class CNG_record(db.Model): 
       ID = db.Column(db.Integer(), primary_key=True)
-      cngdate = db.Column(db.Date())
-      aside = db.Column(db.String(length = 10), nullable=False)
-      bside = db.Column(db.String(length = 10), nullable=False)
-      total = db.Column(db.String(length = 10), nullable=False)
+      cngdate = db.Column(db.Date(),nullable = False)
+      aside = db.Column(db.Integer(), nullable=False)
+      bside = db.Column(db.Integer(), nullable=False)
+      total = db.Column(db.Integer(), nullable=False)
       cngrate = db.Column(db.Integer(), nullable=False)
       cngamt = db.Column(db.Integer(), nullable=False)
 
 
+@login_manager.user_loader
+def load_user(user_id):
+     return User.query.get(int(user_id))
 
-    
+
+class User(db.Model , UserMixin):
+     id = db.Column(db.Integer(), primary_key = True)
+     username = db.Column(db.String(length = 20), nullable= False)
+     password_hash = db.Column(db.String(length=40), nullable = False)
+
+     @property
+     def password(self):
+          return self.password
+     
+     @password.setter
+     def password (self , plain_text):
+          self.password_hash = bcrypt.generate_password_hash(plain_text).decode('utf-8')
+
+     def check_password_correction(self,try_password):
+          return bcrypt.check_password_hash(self.password_hash,try_password)
 
 

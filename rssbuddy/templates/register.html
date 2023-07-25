@@ -1,0 +1,43 @@
+
+{% extends 'base.html' %}
+{% block title %}
+Register
+{% endblock %}
+{% block registeractive %}
+            <li class="nav-item active">
+            {% endblock %}  
+    {% block contents%}
+
+
+<div class="container">
+    <form method="POST" class="form-register" style="color:white;">
+        {{ registerform.csrf_token }}
+        <br>
+        <center>
+        <img src="https://companieslogo.com/img/orig/HINDPETRO.NS-6dfea446.png?t=1604067036" class="img_logo">
+    </center>
+        <h1 style="color:yellow" class="h3 mb-3 font-weight-normal" >
+            Please create your account
+        </h1>
+    {{ registerform.username.label() }}
+    {{ registerform.username(class="form-control", placeholder="User Name") }}
+
+    {{ registerform.password1.label() }}
+    {{ registerform.password1(class="form-control", placeholder="Password") }}
+
+    {{ registerform.password2.label() }}
+    {{ registerform.password2(class="form-control", placeholder="Confirm Password") }}
+
+    <br>
+    <h6>Already have an account ?</h6>
+   <a href="{{url_for('login_page')}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">Login</a>
+    <br>
+    <br>
+
+    {{ registerform.submit(class='btn btn-lg btn-block btn-primary')}}
+
+    </form>
+</div>
+
+{% endblock %}
+
