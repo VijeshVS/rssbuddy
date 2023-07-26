@@ -1,0 +1,108 @@
+26-07-2023 15:41:08 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+26-07-2023 15:41:08 - INFO - [33mPress CTRL+C to quit[0m 
+26-07-2023 15:41:08 - INFO -  * Restarting with stat 
+26-07-2023 15:41:09 - WARNING -  * Debugger is active! 
+26-07-2023 15:41:09 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:41:09 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:09] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:41:17 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:17] "GET / HTTP/1.1" 200 - 
+26-07-2023 15:41:19 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:19] "[32mGET /logout HTTP/1.1[0m" 302 - 
+26-07-2023 15:41:19 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:19] "GET / HTTP/1.1" 200 - 
+26-07-2023 15:41:20 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:20] "[32mGET /accounts/amtrec HTTP/1.1[0m" 302 - 
+26-07-2023 15:41:20 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:20] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+26-07-2023 15:41:21 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:21] "GET /login HTTP/1.1" 200 - 
+26-07-2023 15:41:28 - INFO - Vijesh logged in ! 
+26-07-2023 15:41:28 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:28] "[32mPOST /login HTTP/1.1[0m" 302 - 
+26-07-2023 15:41:28 - INFO - 127.0.0.1 - - [26/Jul/2023 15:41:28] "GET /accounts/ HTTP/1.1" 200 - 
+26-07-2023 15:43:50 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:43:50 - INFO -  * Restarting with stat 
+26-07-2023 15:43:51 - WARNING -  * Debugger is active! 
+26-07-2023 15:43:51 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:43:53 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:43:53 - INFO -  * Restarting with stat 
+26-07-2023 15:43:53 - WARNING -  * Debugger is active! 
+26-07-2023 15:43:53 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:48:38 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:48:38 - INFO -  * Restarting with stat 
+26-07-2023 15:48:39 - WARNING -  * Debugger is active! 
+26-07-2023 15:48:39 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:49:07 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:49:07 - INFO -  * Restarting with stat 
+26-07-2023 15:49:07 - WARNING -  * Debugger is active! 
+26-07-2023 15:49:07 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:50:25 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:50:25 - INFO -  * Restarting with stat 
+26-07-2023 15:50:26 - WARNING -  * Debugger is active! 
+26-07-2023 15:50:26 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:52:04 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:52:04 - INFO -  * Restarting with stat 
+26-07-2023 15:52:04 - WARNING -  * Debugger is active! 
+26-07-2023 15:52:04 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:52:09 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:52:09 - INFO -  * Restarting with stat 
+26-07-2023 15:52:10 - WARNING -  * Debugger is active! 
+26-07-2023 15:52:10 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:52:18 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:52:18 - INFO -  * Restarting with stat 
+26-07-2023 15:52:19 - WARNING -  * Debugger is active! 
+26-07-2023 15:52:19 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:53:12 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:12] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+26-07-2023 15:53:13 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:13] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:53:13 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:13] "[32mPOST /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1[0m" 302 - 
+26-07-2023 15:53:13 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:13] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:53:13 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:13] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - 
+26-07-2023 15:53:19 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:19] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:53:32 - INFO - 127.0.0.1 - - [26/Jul/2023 15:53:32] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:54:16 - INFO - 127.0.0.1 - - [26/Jul/2023 15:54:16] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:54:31 - INFO - 127.0.0.1 - - [26/Jul/2023 15:54:31] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:54:31 - INFO - 127.0.0.1 - - [26/Jul/2023 15:54:31] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:59:31 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 15:59:31 - INFO -  * Restarting with stat 
+26-07-2023 15:59:32 - WARNING -  * Debugger is active! 
+26-07-2023 15:59:32 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 15:59:41 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:41] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:59:43 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:43] "GET /accounts/ HTTP/1.1" 200 - 
+26-07-2023 15:59:44 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:44] "GET /accounts/ HTTP/1.1" 200 - 
+26-07-2023 15:59:45 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:45] "GET /accounts/ HTTP/1.1" 200 - 
+26-07-2023 15:59:47 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:47] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+26-07-2023 15:59:47 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:47] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:59:52 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:52] "[32mPOST /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1[0m" 302 - 
+26-07-2023 15:59:52 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:52] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 15:59:55 - INFO - 127.0.0.1 - - [26/Jul/2023 15:59:55] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:00:02 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 16:00:02 - INFO -  * Restarting with stat 
+26-07-2023 16:00:03 - WARNING -  * Debugger is active! 
+26-07-2023 16:00:03 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 16:00:03 - INFO - 127.0.0.1 - - [26/Jul/2023 16:00:03] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:00:04 - INFO - 127.0.0.1 - - [26/Jul/2023 16:00:04] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:00:04 - INFO - 127.0.0.1 - - [26/Jul/2023 16:00:04] "GET /accounts/ HTTP/1.1" 200 - 
+26-07-2023 16:00:07 - INFO - 127.0.0.1 - - [26/Jul/2023 16:00:07] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+26-07-2023 16:00:07 - INFO - 127.0.0.1 - - [26/Jul/2023 16:00:07] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:00:17 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 16:00:17 - INFO -  * Restarting with stat 
+26-07-2023 16:00:18 - WARNING -  * Debugger is active! 
+26-07-2023 16:00:18 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 16:00:19 - INFO - 127.0.0.1 - - [26/Jul/2023 16:00:19] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:00:29 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 16:00:29 - INFO -  * Restarting with stat 
+26-07-2023 16:00:30 - WARNING -  * Debugger is active! 
+26-07-2023 16:00:30 - INFO -  * Debugger PIN: 957-880-793 
+26-07-2023 16:03:35 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+26-07-2023 16:03:35 - INFO - [33mPress CTRL+C to quit[0m 
+26-07-2023 16:03:35 - INFO -  * Restarting with stat 
+26-07-2023 16:03:36 - WARNING -  * Debugger is active! 
+26-07-2023 16:03:36 - INFO -  * Debugger PIN: 560-013-746 
+26-07-2023 16:03:38 - INFO - 127.0.0.1 - - [26/Jul/2023 16:03:38] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:03:50 - INFO - 127.0.0.1 - - [26/Jul/2023 16:03:50] "[32mPOST /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1[0m" 302 - 
+26-07-2023 16:03:51 - INFO - 127.0.0.1 - - [26/Jul/2023 16:03:51] "GET /print_record?partyname=SML&fromdate=2001-07-02&todate=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:03:51 - INFO - 127.0.0.1 - - [26/Jul/2023 16:03:51] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - 
+26-07-2023 16:04:34 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 16:04:35 - INFO -  * Restarting with stat 
+26-07-2023 16:04:35 - WARNING -  * Debugger is active! 
+26-07-2023 16:04:35 - INFO -  * Debugger PIN: 560-013-746 
+26-07-2023 16:04:36 - INFO - 127.0.0.1 - - [26/Jul/2023 16:04:36] "GET /records?party_name=SML&date1=2001-07-02&date2=2023-07-12 HTTP/1.1" 200 - 
+26-07-2023 16:05:03 - INFO -  * Detected change in 'C:\\Users\\vijes\\OneDrive\\Documents\\Git Repos\\rssbuddy\\rssbuddy\\routes.py', reloading 
+26-07-2023 16:05:03 - INFO -  * Restarting with stat 
+26-07-2023 16:05:04 - WARNING -  * Debugger is active! 
+26-07-2023 16:05:04 - INFO -  * Debugger PIN: 560-013-746 
