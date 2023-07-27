@@ -14,6 +14,9 @@ class Records(db.Model):
     Product = db.Column(db.String(length = 15), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
 
+    def __repr__(self):
+         return f'Date -> {self.Date} | Vehicle No -> {self.VehicleNo}'
+
 
 '''
     @classmethod 

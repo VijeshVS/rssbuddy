@@ -13,7 +13,7 @@ class EnterInfo(FlaskForm):
     product_entry = SelectField(label = 'Product' , choices=[('option1', 'Diesel') , ('option2', 'Petrol')])
 
 class OptionForm(FlaskForm):
-    option_name = StringField(label  = 'Party: ')
+    option_name = StringField(label  = 'Party: ', validators=[DataRequired()])
     option_value = option_name
     new_entry = SubmitField(label = 'New Entry')
     date1 = DateField(label = 'From: ')

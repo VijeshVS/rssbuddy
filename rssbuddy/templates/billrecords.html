@@ -48,8 +48,8 @@
       <br>
     <h1 style="text-align: center;" > {{ partyname }} Accounts </h1>
     <br>
+    <h6 style="text-align: center;"></h6>
     <br>
-
       <table>
         <thead>
           <tr>
@@ -107,19 +107,26 @@
               <tr>
                 <th scope="col">Date</th>
                 <th scope="col">Amount Received</th>
+                <th scope="col">Actions</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 {% for bill in amt_bills %}
+                {% include 'includes/deleteamtrec_modals.html'%}
+
                 <td>{{ bill.AmtDate.strftime('%d/%m/%Y') }}</td>
                 <td>{{ bill.Amount }}</td>
+                <td>
+                  <button type="button"   class="btn btn-outline-danger" data-toggle = 'modal' data-target="#Modal-deleteamtrec-{{ bill.ID }}"> Delete </button>
+                </td>
               </tr>
               {% endfor %}
     
               <tr>
                 <td style="background-color:aqua">Total</td>
                 <td style="background-color:aqua">{{ amt_bills_total }} ₹</td>
+                <td style="background-color:aqua"></td>
               </tr>
 
               </tbody>

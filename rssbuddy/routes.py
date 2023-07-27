@@ -27,17 +27,29 @@ def home_page():
     if request.method == 'POST' :
         date1 = opform.date1.data
         date2 = opform.date2.data
+
         temp_date1 = Records.query.order_by(Records.Date.asc()).first()
         temp_date2 = Records.query.order_by(Records.Date.desc()).first()
-        print(date1)
-        if date1 == None:
-            date1 = temp_date1.Date
 
-        if date2 == None:
-            date2 = temp_date2.Date    
+        if temp_date1 :
+            if date1 == None:
+                date1 = temp_date1.Date
+
+            if date2 == None:
+                date2 = temp_date2.Date
+        else:
+            flash('No Records found !!' , category='info')
+            return redirect(url_for('home_page'))        
+  
 
         party_name = form.option_entry.data
-        return redirect(url_for('records', party_name=party_name,date1=date1,date2=date2))
+        check_empty = Records.query.filter_by(Party = party_name).first()
+        if check_empty:
+            return redirect(url_for('records', party_name=party_name,date1=date1,date2=date2))
+        else:
+            flash('No Records found !!' , category='info')
+            return redirect(url_for('home_page'))
+            
 
     parties = party_record.query.all()
     form.option_entry.choices = [(party.name, party.name) for party in parties]    
@@ -51,7 +63,7 @@ def home_page():
 def account():
     optionform = OptionForm()
 
-    if request.method == 'POST' and optionform.validate():
+    if request.method == 'POST':
         # check duplicate 
         check_party = party_record.query.filter_by(name = optionform.option_name.data).first()
         if check_party:
@@ -71,7 +83,6 @@ def account():
 @app.route('/accounts/add' , methods = ['POST','GET'])
 @login_required
 def adding_acc():
-    #Records.instantiate_from_csv()
     form = EnterInfo()  
     options = party_record.query.all()
     form.option_entry.choices = [(option.name , option.name) for option in options]
@@ -114,8 +125,6 @@ def records():
     fromdate = request.args.get('date1')
     todate = request.args.get('date2')
 
-
-
     print = Print()
     deleteform = DeleteForm()
     updateform = UpdateForm()
@@ -129,6 +138,15 @@ def records():
             date = bill_object.Date.strftime('%d/%m/%Y')
             app.logger.info(f'{date} | {bill_object.Party} | {bill_object.VehicleNo} | {bill_object.Volume} L , Bill deleted successfully by {current_user.username}')
             flash(f'{date} | {bill_object.Party} | {bill_object.VehicleNo} | {bill_object.Volume} L , Bill deleted successfully' , category = 'success')  
+            return redirect(url_for('home_page'))
+        
+        billdel_id = request.form.get('amtdel')
+        billdel_object = AmountRecord.query.filter_by( ID = billdel_id ).first()
+        if billdel_object:
+            db.session.delete(billdel_object)
+            db.session.commit()
+            dateK = billdel_object.AmtDate.strftime('%d/%m/%Y')
+            flash(f'{billdel_object.Amount} ₹ received for {billdel_object.AmtParty} at {dateK} has been removed successfully',category='success')
             return redirect(url_for('home_page'))
         
         billup_id = request.form.get('update_item')
@@ -163,7 +181,7 @@ def records():
         return redirect(url_for('printable_page',partyname=partyname,
                                 fromdate=fromdate,todate=todate))
     
-
+    
 
     if request.method == 'GET':
         amt_bills = AmountRecord.query.filter(AmountRecord.AmtParty == partyname)
@@ -172,11 +190,9 @@ def records():
         for amt in amt_bills:
             amt_bills_total += amt.Amount
     
-        
+       
 
-        bill_records = Records.query.filter(
-        Records.Date.between(fromdate, todate),
-        Records.Party == partyname).order_by(Records.Date.asc()).all()
+        bill_records = Records.query.filter(Records.Date.between(fromdate, todate), Records.Party == partyname).order_by(Records.Date.asc()).all()
         # bill_records = db.session.query(Records).filter_by(Party=partyname).all()
         totalvolume=0
         totalamount=0
@@ -188,6 +204,7 @@ def records():
             totalvolume += bill.Volume
             totalamount += bill.Amount
 
+
         balance = float(totalamount) - float(amt_bills_total)   
         balance = round(balance,2)  
 
@@ -195,7 +212,8 @@ def records():
                             bill_records=bill_records,partyname=partyname,
                             totalvolume=totalvolume,totalamount=totalamount,
                             amt_bills_total=amt_bills_total,amt_bills=amt_bills,balance=balance,
-                            deleteform=deleteform,updateform=updateform,print=print)
+                            deleteform=deleteform,updateform=updateform,print=print,
+                            fromdate=fromdate,todate=todate)
     
 
 @app.route('/print_record',methods = ['POST','GET'])
@@ -277,18 +295,19 @@ def add_cng():
 @app.route('/cng/',methods = ['POST','GET'])
 @login_required
 def cng_home():
-
-    hello = Records.query.all()
-    
-    for bill in hello:
-        bill.Amount = bill.Volume * bill.Rate
-        db.session.commit()
-
     opform = OptionForm()
-    if request.method == 'POST':
+
+    if request.method == 'POST' :
         cngdate1 = opform.date1.data
         cngdate2 = opform.date2.data
+        temp_date1 = CNG_record.query.order_by(CNG_record.cngdate.asc()).first()
+        temp_date2 = CNG_record.query.order_by(CNG_record.cngdate.desc()).first()
+        if cngdate1 == None:
+            cngdate1 = temp_date1.cngdate
+        if cngdate2 == None:
+            cngdate2 = temp_date2.cngdate
         return redirect(url_for('cng_records',cngdate1=cngdate1,cngdate2=cngdate2))
+        
 
     if request.method == 'GET':
         return render_template('cnghome.html',opform=opform)    
@@ -299,8 +318,10 @@ def cng_home():
 def cng_records():
     fromdate = request.args.get('cngdate1')
     todate = request.args.get('cngdate2')
+
     bill_records = CNG_record.query.filter(
-    CNG_record.cngdate.between(fromdate, todate))
+    CNG_record.cngdate.between(fromdate, todate)).order_by(CNG_record.cngdate.asc()).all()
+
     # bill_records = db.session.query(Records).filter_by(Party=partyname).all()
     totalvolume=0
     totalamount=0
@@ -389,6 +410,7 @@ def export_table_to_csv():
 
     return response 
 
+
 @app.route('/amtreccsv')
 def amt_rec_export():
     table_data_amtrec = AmountRecord.query.all()
@@ -405,3 +427,11 @@ def amt_rec_export():
     )   
 
     return response 
+
+
+
+@app.route('/importrecords')
+def import_records_page():
+    #Records.instantiate_from_csv()
+
+    return 'Records imported successfully'
