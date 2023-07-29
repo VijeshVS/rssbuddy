@@ -14,7 +14,6 @@ Add MS / HSD Bills
     <br>
     <h1 style="text-align: center;color:yellow" >Add MS/HSD Bill</h1>
     <br>
-    <br>
 
 <div class="container">
 
@@ -30,6 +29,9 @@ Add MS / HSD Bills
     {{ form.product_entry(class="form-control", placeholder="Product") }}
     {{ form.Volume.label() }}
     {{ form.Volume(class="form-control", placeholder="Volume") }}
+    {{ form.Rate.label() }}
+    {{ form.Rate(class="form-control", placeholder="Rate (Optional)") }}
+
     <br>
     {{ form.submit(class='btn btn-lg btn-block btn-primary')}}
     </form>

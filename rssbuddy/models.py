@@ -17,8 +17,6 @@ class Records(db.Model):
     def __repr__(self):
          return f'Date -> {self.Date} | Vehicle No -> {self.VehicleNo}'
 
-
-'''
     @classmethod 
     def instantiate_from_csv(cls):
         from datetime import datetime
@@ -29,7 +27,7 @@ class Records(db.Model):
         for item in items:
              
              temp_rec = Records(Party = item.get('party'),
-                     Date = datetime.strptime(item.get('date'), '%d-%m-%Y').date(),
+                     Date = datetime.strptime(item.get('date'), '%Y-%m-%d').date(),
                      VehicleNo = item.get('vehicleno'),                   
                      Volume = item.get('volume'),
                      Rate = item.get('rate'),
@@ -39,7 +37,7 @@ class Records(db.Model):
              db.session.add(temp_rec)
              db.session.commit()  
 
-             '''          
+         
 
 class party_record(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
@@ -50,6 +48,21 @@ class AmountRecord(db.Model):
     AmtDate = db.Column(db.Date(), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
     AmtParty = db.Column(db.String(length = 20), nullable=False)
+
+    @classmethod
+    def instantiate(cls):
+         from datetime import datetime
+         with open('items.csv','r') as f:
+              reader = csv.DictReader(f)
+              items = list(reader)
+         for item in items:
+              temp_rec = AmountRecord(AmtDate = datetime.strptime(item.get('date'), '%Y-%m-%d').date(),
+                     Amount = item.get('amount'),                   
+                     AmtParty = item.get('party'))
+              
+              db.session.add(temp_rec)
+              db.session.commit() 
+               
 
 class CNG_record(db.Model): 
       ID = db.Column(db.Integer(), primary_key=True)
@@ -82,4 +95,6 @@ class User(db.Model , UserMixin):
      def check_password_correction(self,try_password):
           return bcrypt.check_password_hash(self.password_hash,try_password)
 
+     def __repr__(self):
+          return f'{self.username} ID -> {self.id}'
 

@@ -1100,3 +1100,864 @@
 27-07-2023 11:30:06 - INFO - 127.0.0.1 - - [27/Jul/2023 11:30:06] "GET / HTTP/1.1" 200 - 
 27-07-2023 11:30:23 - INFO - 127.0.0.1 - - [27/Jul/2023 11:30:23] "GET / HTTP/1.1" 200 - 
 27-07-2023 11:30:23 - INFO - 127.0.0.1 - - [27/Jul/2023 11:30:23] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:14:40 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+27-07-2023 13:14:40 - INFO - [33mPress CTRL+C to quit[0m 
+27-07-2023 13:14:40 - INFO -  * Restarting with stat 
+27-07-2023 13:14:40 - WARNING -  * Debugger is active! 
+27-07-2023 13:14:40 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:14:46 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/models.py', reloading 
+27-07-2023 13:14:46 - INFO -  * Restarting with stat 
+27-07-2023 13:14:46 - WARNING -  * Debugger is active! 
+27-07-2023 13:14:46 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:14:52 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:52] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:14:54 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:54] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:14:54 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:54] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:14:55 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:55] "[32mGET /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 13:14:55 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:55] "GET /login?next=/accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:14:55 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:55] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:14:55 - INFO - 127.0.0.1 - - [27/Jul/2023 13:14:55] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:01 - INFO - Dealer logged in ! 
+27-07-2023 13:15:01 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:01] "[32mPOST /login?next=/accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:01 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:01] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:06 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:06] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:15:07 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:07] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:15:07 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:07] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:15:08 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:08] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:15:08 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:08] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:15:09 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:09] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:09 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:09] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:15:10 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:10] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:10 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:10] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:15:11 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:11] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:12 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:12] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:12 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:12] "GET /records?party_name=SML&date1=2023-03-12&date2=2023-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:15:16 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:16] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:16 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:16] "GET /records?party_name=Meridian&date1=2023-03-12&date2=2023-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:15:19 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:19] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:15:26 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:26] "[32mPOST /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:26 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:26] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:15:27 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:27] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:30 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:30] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:30 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:30] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:33 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:33] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:33 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:33] "GET /records?party_name=Meridian&date1=2023-03-12&date2=2023-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:15:42 - INFO - 23/04/2023 | Meridian | KA01AE4519 | 800 L , Bill deleted successfully by Dealer 
+27-07-2023 13:15:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:42] "[32mPOST /records?party_name=Meridian&date1=2023-03-12&date2=2023-04-23 HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:42] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:45 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:45] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:45 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:45] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:15:50 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:50] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:15:50 - INFO - 127.0.0.1 - - [27/Jul/2023 13:15:50] "GET /records?party_name=GCC&date1=2023-03-12&date2=2023-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:16:15 - INFO - Bill changed to -> 21/07/2023 | GCC | KA01AE4519 | 1000 L , Bill updated successfully by Dealer 
+27-07-2023 13:16:15 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:15] "[32mPOST /records?party_name=GCC&date1=2023-03-12&date2=2023-04-23 HTTP/1.1[0m" 302 - 
+27-07-2023 13:16:15 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:15] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:16:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:18] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:16:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:18] "GET /records?party_name=GCC&date1=2023-03-12&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:16:27 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:27] "[32mPOST /records?party_name=GCC&date1=2023-03-12&date2=2023-07-21 HTTP/1.1[0m" 302 - 
+27-07-2023 13:16:27 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:27] "GET /print_record?partyname=GCC&fromdate=2023-03-12&todate=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:16:27 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - 
+27-07-2023 13:16:30 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:30] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:30 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:30] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:16:31 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:31] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:32 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:32] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:16:32 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:32] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:16:34 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:34] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:16:35 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:35] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:16:36 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:36] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:36 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:36] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:16:37 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:37] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:16:37 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:37] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:38 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:38] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:16:38 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:38] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:39 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:39] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:16:39 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:39] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:16:40 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:40] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:16:41 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:41] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:16:41 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:41] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:16:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:42] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:42] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:16:43 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:43] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:16:45 - INFO - 127.0.0.1 - - [27/Jul/2023 13:16:45] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:17:13 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:13] "[32mPOST /cng/addcng HTTP/1.1[0m" 302 - 
+27-07-2023 13:17:13 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:13] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:17:15 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:15] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:17:19 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:19] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 13:17:21 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:21] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:17:21 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:21] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2005-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:17:55 - INFO - 127.0.0.1 - - [27/Jul/2023 13:17:55] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2005-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:18:01 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:01] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2005-04-23 HTTP/1.1" 200 - 
+27-07-2023 13:18:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:18] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:18:35 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:35] "[32mPOST /cng/addcng HTTP/1.1[0m" 302 - 
+27-07-2023 13:18:35 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:35] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:18:39 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:39] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:18:40 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:40] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 13:18:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:42] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:18:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:18:42] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 13:19:37 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:19:37 - INFO -  * Restarting with stat 
+27-07-2023 13:19:38 - WARNING -  * Debugger is active! 
+27-07-2023 13:19:38 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:19:47 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:19:47 - INFO -  * Restarting with stat 
+27-07-2023 13:19:47 - WARNING -  * Debugger is active! 
+27-07-2023 13:19:47 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:19:51 - INFO - 127.0.0.1 - - [27/Jul/2023 13:19:51] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:19:51 - INFO - 127.0.0.1 - - [27/Jul/2023 13:19:51] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 13:19:57 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:19:57 - INFO -  * Restarting with stat 
+27-07-2023 13:19:57 - WARNING -  * Debugger is active! 
+27-07-2023 13:19:57 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:19:59 - INFO - 127.0.0.1 - - [27/Jul/2023 13:19:59] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:19:59 - INFO - 127.0.0.1 - - [27/Jul/2023 13:19:59] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 13:20:32 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:32 - INFO -  * Restarting with stat 
+27-07-2023 13:20:32 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:32 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:35 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:35 - INFO -  * Restarting with stat 
+27-07-2023 13:20:35 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:35 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:41 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:41 - INFO -  * Restarting with stat 
+27-07-2023 13:20:41 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:41 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:44 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:44 - INFO -  * Restarting with stat 
+27-07-2023 13:20:44 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:44 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:47 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:47 - INFO -  * Restarting with stat 
+27-07-2023 13:20:47 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:47 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:50 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:50 - INFO -  * Restarting with stat 
+27-07-2023 13:20:51 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:51 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:53 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 13:20:53 - INFO -  * Restarting with stat 
+27-07-2023 13:20:53 - WARNING -  * Debugger is active! 
+27-07-2023 13:20:53 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:20:55 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:55] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 13:20:56 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:56] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:20:57 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:57] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:20:57 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:57] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:20:58 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:58] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:20:59 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:59] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:20:59 - INFO - 127.0.0.1 - - [27/Jul/2023 13:20:59] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:21:00 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:00] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:21:04 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:04] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:21:04 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:04] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:21:06 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:06] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 13:21:07 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:07] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 13:21:08 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:08] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 13:21:09 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:09] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:21:09 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:09] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 13:21:41 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:41] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:21:42 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:42] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:21:43 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:43] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:21:43 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:43] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:21:44 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:44] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:21:48 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:48] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:21:50 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:50] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:21:50 - INFO - 127.0.0.1 - - [27/Jul/2023 13:21:50] "GET /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:22:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:22:18] "[35m[1mPOST /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1[0m" 500 - 
+27-07-2023 13:22:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:22:18] "[36mGET /records?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 13:22:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:22:18] "[36mGET /records?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 13:22:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:22:18] "[36mGET /records?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 13:22:18 - INFO - 127.0.0.1 - - [27/Jul/2023 13:22:18] "[36mGET /records?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 13:23:26 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 13:23:26 - INFO -  * Restarting with stat 
+27-07-2023 13:23:26 - WARNING -  * Debugger is active! 
+27-07-2023 13:23:26 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:29] "[35m[1mPOST /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1[0m" 500 - 
+27-07-2023 13:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:29] "[36mGET /records?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 13:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:29] "[36mGET /records?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 13:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:29] "[36mGET /records?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 13:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:29] "[36mGET /records?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 13:23:34 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 13:23:34 - INFO -  * Restarting with stat 
+27-07-2023 13:23:34 - WARNING -  * Debugger is active! 
+27-07-2023 13:23:34 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:23:35 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 13:23:35 - INFO -  * Restarting with stat 
+27-07-2023 13:23:35 - WARNING -  * Debugger is active! 
+27-07-2023 13:23:35 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:23:36 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 13:23:36 - INFO -  * Restarting with stat 
+27-07-2023 13:23:37 - WARNING -  * Debugger is active! 
+27-07-2023 13:23:37 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:23:38 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 13:23:38 - INFO -  * Restarting with stat 
+27-07-2023 13:23:38 - WARNING -  * Debugger is active! 
+27-07-2023 13:23:38 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 13:23:40 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:40] "GET /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:23:40 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:40] "GET /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:23:40 - INFO - 127.0.0.1 - - [27/Jul/2023 13:23:40] "GET /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:24:02 - INFO - Bill changed to -> 23/05/2023 | SML | KA1923879 | 700 L , Bill updated successfully by Dealer 
+27-07-2023 13:24:02 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:02] "[32mPOST /records?party_name=SML&date1=2023-03-12&date2=2023-07-21 HTTP/1.1[0m" 302 - 
+27-07-2023 13:24:02 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:02] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:24:07 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:07] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 13:24:07 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:07] "GET /records?party_name=SML&date1=2023-05-23&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:24:15 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:15] "[32mPOST /records?party_name=SML&date1=2023-05-23&date2=2023-07-21 HTTP/1.1[0m" 302 - 
+27-07-2023 13:24:15 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:15] "GET /print_record?partyname=SML&fromdate=2023-05-23&todate=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 13:24:21 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:21] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:24:23 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:23] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:24:24 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:24] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:24:25 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:25] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 13:24:25 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:25] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 13:24:27 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:27] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 13:24:28 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:28] "GET / HTTP/1.1" 200 - 
+27-07-2023 13:24:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:29] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 13:24:29 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:29] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 13:24:30 - INFO - 127.0.0.1 - - [27/Jul/2023 13:24:30] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 14:35:35 - INFO - 127.0.0.1 - - [27/Jul/2023 14:35:35] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:35:39 - INFO - 127.0.0.1 - - [27/Jul/2023 14:35:39] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:35:39 - INFO - 127.0.0.1 - - [27/Jul/2023 14:35:39] "GET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 14:37:28 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:28] "[35m[1mGET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 500 - 
+27-07-2023 14:37:28 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:28] "GET /cngrecords?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 - 
+27-07-2023 14:37:28 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:28] "GET /cngrecords?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 - 
+27-07-2023 14:37:28 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:28] "GET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 - 
+27-07-2023 14:37:28 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:28] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:50 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:50] "[35m[1mGET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 500 - 
+27-07-2023 14:37:50 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:50] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:50 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:50] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:50 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:50] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:50 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:50] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:51] "[35m[1mGET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 500 - 
+27-07-2023 14:37:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:51] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:51] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:51] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:51] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[35m[1mGET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 500 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[35m[1mGET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 500 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:37:52 - INFO - 127.0.0.1 - - [27/Jul/2023 14:37:52] "[36mGET /cngrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:42:36 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 14:42:36 - INFO -  * Restarting with stat 
+27-07-2023 14:42:36 - WARNING -  * Debugger is active! 
+27-07-2023 14:42:36 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 14:42:39 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:39] "[33mGET /cngrecords?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 404 - 
+27-07-2023 14:42:44 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:44] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:42:44 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:44] "GET /cng/records?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1" 200 - 
+27-07-2023 14:42:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:51] "[32mPOST /cng/records?cngdate1=2005-04-23&cngdate2=2023-03-21 HTTP/1.1[0m" 302 - 
+27-07-2023 14:42:51 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:51] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:42:53 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:53] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:42:53 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:53] "GET /cng/records?cngdate1=2005-04-23&cngdate2=2005-04-23 HTTP/1.1" 200 - 
+27-07-2023 14:42:59 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:59] "[32mPOST /cng/records?cngdate1=2005-04-23&cngdate2=2005-04-23 HTTP/1.1[0m" 302 - 
+27-07-2023 14:42:59 - INFO - 127.0.0.1 - - [27/Jul/2023 14:42:59] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:43:04 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:04] "GET / HTTP/1.1" 200 - 
+27-07-2023 14:43:06 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:06] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 14:43:07 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:07] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:43:07 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:07] "GET /records?party_name=SML&date1=2023-05-23&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 14:43:12 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:12] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:43:12 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:12] "GET /records?party_name=GCC&date1=2023-05-23&date2=2023-07-21 HTTP/1.1" 200 - 
+27-07-2023 14:43:17 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:17] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:43:17 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:17] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 14:43:19 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:19] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 14:43:20 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:20] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 14:43:21 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:21] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:43:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:23] "[35m[1mPOST /cng/ HTTP/1.1[0m" 500 - 
+27-07-2023 14:43:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:23] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:23] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:23] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:23] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:34 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:34] "[35m[1mPOST /cng/ HTTP/1.1[0m" 500 - 
+27-07-2023 14:43:34 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:34] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:34 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:34] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:34 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:34] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:43:34 - INFO - 127.0.0.1 - - [27/Jul/2023 14:43:34] "[36mGET /cng/?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 14:45:38 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 14:45:38 - INFO -  * Restarting with stat 
+27-07-2023 14:45:38 - WARNING -  * Debugger is active! 
+27-07-2023 14:45:38 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 14:45:41 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:41] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:45:41 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:41] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:45:41 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:41] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:45:41 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:41] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:45:42 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:42] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:45:42 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:42] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:45:48 - INFO - 127.0.0.1 - - [27/Jul/2023 14:45:48] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 14:46:03 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:03] "[32mPOST /cng/addcng HTTP/1.1[0m" 302 - 
+27-07-2023 14:46:03 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:03] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 14:46:05 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:05] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 14:46:06 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:06] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:46:08 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:08] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:46:08 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:08] "GET /cng/records?cngdate1=2023-04-23&cngdate2=2023-04-23 HTTP/1.1" 200 - 
+27-07-2023 14:46:13 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:13] "[32mPOST /cng/records?cngdate1=2023-04-23&cngdate2=2023-04-23 HTTP/1.1[0m" 302 - 
+27-07-2023 14:46:13 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:13] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:46:17 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:17] "[32mPOST /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 14:46:17 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:17] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 14:46:21 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:21] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 14:46:22 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:22] "GET / HTTP/1.1" 200 - 
+27-07-2023 14:46:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:23] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 14:46:23 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:23] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 14:46:24 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:24] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 14:46:25 - INFO - 127.0.0.1 - - [27/Jul/2023 14:46:25] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 14:46:36 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 14:46:36 - INFO -  * Restarting with stat 
+27-07-2023 14:46:37 - WARNING -  * Debugger is active! 
+27-07-2023 14:46:37 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:39:39 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+27-07-2023 15:39:39 - INFO - [33mPress CTRL+C to quit[0m 
+27-07-2023 15:39:39 - INFO -  * Restarting with stat 
+27-07-2023 15:39:39 - WARNING -  * Debugger is active! 
+27-07-2023 15:39:39 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:39:46 - INFO - 127.0.0.1 - - [27/Jul/2023 15:39:46] "[32mGET /accounts/amtrec HTTP/1.1[0m" 302 - 
+27-07-2023 15:39:46 - INFO - 127.0.0.1 - - [27/Jul/2023 15:39:46] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:40:05 - INFO - 127.0.0.1 - - [27/Jul/2023 15:40:05] "[35m[1mPOST /login?next=/accounts/amtrec HTTP/1.1[0m" 500 - 
+27-07-2023 15:40:05 - INFO - 127.0.0.1 - - [27/Jul/2023 15:40:05] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 15:40:05 - INFO - 127.0.0.1 - - [27/Jul/2023 15:40:05] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 15:40:05 - INFO - 127.0.0.1 - - [27/Jul/2023 15:40:05] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:40:05 - INFO - 127.0.0.1 - - [27/Jul/2023 15:40:05] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:41:34 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 15:41:34 - INFO -  * Restarting with stat 
+27-07-2023 15:41:34 - WARNING -  * Debugger is active! 
+27-07-2023 15:41:34 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:41:35 - INFO - 127.0.0.1 - - [27/Jul/2023 15:41:35] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:41:39 - INFO - 127.0.0.1 - - [27/Jul/2023 15:41:39] "[35m[1mPOST /login?next=/accounts/amtrec HTTP/1.1[0m" 500 - 
+27-07-2023 15:41:39 - INFO - 127.0.0.1 - - [27/Jul/2023 15:41:39] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 15:41:39 - INFO - 127.0.0.1 - - [27/Jul/2023 15:41:39] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 15:41:39 - INFO - 127.0.0.1 - - [27/Jul/2023 15:41:39] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:41:39 - INFO - 127.0.0.1 - - [27/Jul/2023 15:41:39] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:42:22 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 15:42:22 - INFO -  * Restarting with stat 
+27-07-2023 15:42:22 - WARNING -  * Debugger is active! 
+27-07-2023 15:42:22 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:42:26 - INFO - 127.0.0.1 - - [27/Jul/2023 15:42:26] "[35m[1mPOST /login?next=/accounts/amtrec HTTP/1.1[0m" 500 - 
+27-07-2023 15:42:26 - INFO - 127.0.0.1 - - [27/Jul/2023 15:42:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 15:42:26 - INFO - 127.0.0.1 - - [27/Jul/2023 15:42:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 15:42:26 - INFO - 127.0.0.1 - - [27/Jul/2023 15:42:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:42:26 - INFO - 127.0.0.1 - - [27/Jul/2023 15:42:26] "[36mGET /login?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:44:28 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 15:44:28 - INFO -  * Restarting with stat 
+27-07-2023 15:44:28 - WARNING -  * Debugger is active! 
+27-07-2023 15:44:28 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:44:29 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:29] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:44:29 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:29] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:44:30 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:30] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:44:30 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:30] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:44:30 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:30] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:44:30 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:30] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:44:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:37] "[32mPOST /login?next=/accounts/amtrec HTTP/1.1[0m" 302 - 
+27-07-2023 15:44:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:37] "GET /login HTTP/1.1" 200 - 
+27-07-2023 15:44:53 - INFO - Dealer logged in ! 
+27-07-2023 15:44:53 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:53] "[32mPOST /login HTTP/1.1[0m" 302 - 
+27-07-2023 15:44:53 - INFO - 127.0.0.1 - - [27/Jul/2023 15:44:53] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:45:02 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:02] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 15:45:04 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:04] "GET / HTTP/1.1" 200 - 
+27-07-2023 15:45:06 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:06] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:45:08 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:08] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:45:09 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:09] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:45:13 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:13] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 15:45:13 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:13] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:45:14 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:14] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:45:15 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:15] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 15:45:16 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:16] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:45:16 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:16] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 15:45:17 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:17] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:45:29 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:29] "[32mPOST /accounts/amtrec HTTP/1.1[0m" 302 - 
+27-07-2023 15:45:29 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:29] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:45:31 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:31] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 15:45:33 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:33] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 15:45:34 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:34] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:45:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:37] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 15:45:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:37] "[35m[1mGET /records?party_name=SML&date1=2023-05-23&date2=2023-07-21 HTTP/1.1[0m" 500 - 
+27-07-2023 15:45:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:37] "[36mGET /records?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+27-07-2023 15:45:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:37] "[36mGET /records?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+27-07-2023 15:45:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:37] "[36mGET /records?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:45:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:45:37] "[36mGET /records?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:49:13 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 15:49:13 - INFO -  * Restarting with stat 
+27-07-2023 15:49:13 - WARNING -  * Debugger is active! 
+27-07-2023 15:49:13 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:50:23 - INFO - 127.0.0.1 - - [27/Jul/2023 15:50:23] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:50:24 - INFO - 127.0.0.1 - - [27/Jul/2023 15:50:24] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:50:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:50:37] "[32mPOST /accounts/amtrec HTTP/1.1[0m" 302 - 
+27-07-2023 15:50:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:50:37] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:51:02 - INFO - 127.0.0.1 - - [27/Jul/2023 15:51:02] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:51:33 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 15:51:33 - INFO -  * Restarting with stat 
+27-07-2023 15:51:33 - WARNING -  * Debugger is active! 
+27-07-2023 15:51:33 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:51:49 - INFO - 127.0.0.1 - - [27/Jul/2023 15:51:49] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:51:59 - INFO - 127.0.0.1 - - [27/Jul/2023 15:51:59] "[32mPOST /accounts/amtrec HTTP/1.1[0m" 302 - 
+27-07-2023 15:51:59 - INFO - 127.0.0.1 - - [27/Jul/2023 15:51:59] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:52:21 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/forms.py', reloading 
+27-07-2023 15:52:21 - INFO -  * Restarting with stat 
+27-07-2023 15:56:40 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+27-07-2023 15:56:40 - INFO - [33mPress CTRL+C to quit[0m 
+27-07-2023 15:56:40 - INFO -  * Restarting with stat 
+27-07-2023 15:56:40 - WARNING -  * Debugger is active! 
+27-07-2023 15:56:40 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:56:47 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:47] "[32mGET /accounts/amtrec HTTP/1.1[0m" 302 - 
+27-07-2023 15:56:47 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:47] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 15:56:58 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:58] "[35m[1mGET /importrecords HTTP/1.1[0m" 500 - 
+27-07-2023 15:56:58 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:58] "GET /importrecords?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 - 
+27-07-2023 15:56:58 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:58] "GET /importrecords?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 - 
+27-07-2023 15:56:58 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:58] "GET /importrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 - 
+27-07-2023 15:56:58 - INFO - 127.0.0.1 - - [27/Jul/2023 15:56:58] "[36mGET /importrecords?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+27-07-2023 15:57:35 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/models.py', reloading 
+27-07-2023 15:57:35 - INFO -  * Restarting with stat 
+27-07-2023 15:57:35 - WARNING -  * Debugger is active! 
+27-07-2023 15:57:35 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:57:45 - INFO - 127.0.0.1 - - [27/Jul/2023 15:57:45] "GET /importrecords HTTP/1.1" 200 - 
+27-07-2023 15:57:45 - INFO - 127.0.0.1 - - [27/Jul/2023 15:57:45] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - 
+27-07-2023 15:58:00 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 15:58:00 - INFO -  * Restarting with stat 
+27-07-2023 15:58:00 - WARNING -  * Debugger is active! 
+27-07-2023 15:58:00 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 15:58:05 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:05] "GET / HTTP/1.1" 200 - 
+27-07-2023 15:58:06 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:06] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 15:58:06 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:06] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:58:10 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:10] "GET /register HTTP/1.1" 200 - 
+27-07-2023 15:58:25 - INFO - Dealer registered ! 
+27-07-2023 15:58:25 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:25] "[32mPOST /register HTTP/1.1[0m" 302 - 
+27-07-2023 15:58:25 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:25] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:58:29 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:29] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 15:58:32 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:32] "[32mPOST /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 15:58:32 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:32] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 15:58:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:37] "[32mPOST /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 15:58:37 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:37] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 15:58:42 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:42] "[32mPOST /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 15:58:42 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:42] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 15:58:43 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:43] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 15:58:47 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:47] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 15:58:47 - INFO - 127.0.0.1 - - [27/Jul/2023 15:58:47] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 15:59:02 - INFO - 127.0.0.1 - - [27/Jul/2023 15:59:02] "[32mPOST /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1[0m" 302 - 
+27-07-2023 15:59:02 - INFO - 127.0.0.1 - - [27/Jul/2023 15:59:02] "GET /print_record?partyname=SML&fromdate=2023-05-03&todate=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:00:00 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:00] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:00:00 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:00] "GET /records?party_name=GCC&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:00:20 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:20] "[32mPOST /records?party_name=GCC&date1=2023-05-03&date2=2023-07-24 HTTP/1.1[0m" 302 - 
+27-07-2023 16:00:20 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:20] "GET /print_record?partyname=GCC&fromdate=2023-05-03&todate=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:00:28 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:28] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:00:29 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:29] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:00:30 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:30] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:00:30 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:30] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:00:31 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:31] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:00:33 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:33] "[32mPOST /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 16:00:33 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:33] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:00:34 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:34] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:00:37 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:37] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:00:37 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:37] "GET /records?party_name=BAWA&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:00:42 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:42] "[32mPOST /records?party_name=BAWA&date1=2023-05-03&date2=2023-07-24 HTTP/1.1[0m" 302 - 
+27-07-2023 16:00:42 - INFO - 127.0.0.1 - - [27/Jul/2023 16:00:42] "GET /print_record?partyname=BAWA&fromdate=2023-05-03&todate=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:05:51 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/models.py', reloading 
+27-07-2023 16:05:51 - INFO -  * Restarting with stat 
+27-07-2023 16:05:51 - WARNING -  * Debugger is active! 
+27-07-2023 16:05:51 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:06:05 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 16:06:05 - INFO -  * Restarting with stat 
+27-07-2023 16:06:05 - WARNING -  * Debugger is active! 
+27-07-2023 16:06:05 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:06:29 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 16:06:29 - INFO -  * Restarting with stat 
+27-07-2023 16:06:29 - WARNING -  * Debugger is active! 
+27-07-2023 16:06:29 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:06:31 - INFO - 127.0.0.1 - - [27/Jul/2023 16:06:31] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:06:36 - INFO - 127.0.0.1 - - [27/Jul/2023 16:06:36] "GET /importrecords HTTP/1.1" 200 - 
+27-07-2023 16:06:45 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 16:06:45 - INFO -  * Restarting with stat 
+27-07-2023 16:06:45 - WARNING -  * Debugger is active! 
+27-07-2023 16:06:45 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:06:49 - INFO - 127.0.0.1 - - [27/Jul/2023 16:06:49] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:06:50 - INFO - 127.0.0.1 - - [27/Jul/2023 16:06:50] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:06:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:06:53] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:06:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:06:53] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:07:24 - INFO - 127.0.0.1 - - [27/Jul/2023 16:07:24] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:07:24 - INFO - 127.0.0.1 - - [27/Jul/2023 16:07:24] "GET /records?party_name=GCC&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:07:33 - INFO - 127.0.0.1 - - [27/Jul/2023 16:07:33] "[32mPOST /records?party_name=GCC&date1=2023-05-03&date2=2023-07-24 HTTP/1.1[0m" 302 - 
+27-07-2023 16:07:33 - INFO - 127.0.0.1 - - [27/Jul/2023 16:07:33] "GET /print_record?partyname=GCC&fromdate=2023-05-03&todate=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:08:28 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:28] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:30 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:30] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:08:30 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:30] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:08:31 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:31] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:08:32 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:32] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:08:32 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:32] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 16:08:38 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:38] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 16:08:39 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:39] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 16:08:41 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:41] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:43 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:43] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:08:44 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:44] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:45 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:45] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:08:45 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:45] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:08:46 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:46] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:47 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:47] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:08:47 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:47] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:48 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:48] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:08:48 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:48] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:49 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:49] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:08:50 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:50] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:08:56 - INFO - 127.0.0.1 - - [27/Jul/2023 16:08:56] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:09:00 - INFO - 127.0.0.1 - - [27/Jul/2023 16:09:00] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:09:00 - INFO - 127.0.0.1 - - [27/Jul/2023 16:09:00] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:09:56 - INFO - 127.0.0.1 - - [27/Jul/2023 16:09:56] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:09:57 - INFO - 127.0.0.1 - - [27/Jul/2023 16:09:57] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:09:58 - INFO - 127.0.0.1 - - [27/Jul/2023 16:09:58] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:10:00 - INFO - 127.0.0.1 - - [27/Jul/2023 16:10:00] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 16:10:00 - INFO - 127.0.0.1 - - [27/Jul/2023 16:10:00] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:10:01 - INFO - 127.0.0.1 - - [27/Jul/2023 16:10:01] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:10:58 - INFO - 127.0.0.1 - - [27/Jul/2023 16:10:58] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:11:13 - INFO - 127.0.0.1 - - [27/Jul/2023 16:11:13] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:11:42 - INFO - 127.0.0.1 - - [27/Jul/2023 16:11:42] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:11:45 - INFO - 127.0.0.1 - - [27/Jul/2023 16:11:45] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:11:45 - INFO - 127.0.0.1 - - [27/Jul/2023 16:11:45] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:13:27 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 16:13:27 - INFO -  * Restarting with stat 
+27-07-2023 16:13:27 - WARNING -  * Debugger is active! 
+27-07-2023 16:13:27 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:13:28 - INFO - 127.0.0.1 - - [27/Jul/2023 16:13:28] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:13:45 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 16:13:45 - INFO -  * Restarting with stat 
+27-07-2023 16:13:46 - WARNING -  * Debugger is active! 
+27-07-2023 16:13:46 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:13:47 - INFO - 127.0.0.1 - - [27/Jul/2023 16:13:47] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:17:16 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+27-07-2023 16:17:16 - INFO -  * Restarting with stat 
+27-07-2023 16:17:16 - WARNING -  * Debugger is active! 
+27-07-2023 16:17:16 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:17:46 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+27-07-2023 16:17:46 - INFO - [33mPress CTRL+C to quit[0m 
+27-07-2023 16:17:46 - INFO -  * Restarting with stat 
+27-07-2023 16:17:46 - WARNING -  * Debugger is active! 
+27-07-2023 16:17:46 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 16:17:50 - INFO - 127.0.0.1 - - [27/Jul/2023 16:17:50] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:17:50 - INFO - 127.0.0.1 - - [27/Jul/2023 16:17:50] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:17:51 - INFO - 127.0.0.1 - - [27/Jul/2023 16:17:51] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:17:51 - INFO - 127.0.0.1 - - [27/Jul/2023 16:17:51] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:17:52 - INFO - 127.0.0.1 - - [27/Jul/2023 16:17:52] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:17:52 - INFO - 127.0.0.1 - - [27/Jul/2023 16:17:52] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:18:08 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:08] "[32mPOST /accounts/add HTTP/1.1[0m" 302 - 
+27-07-2023 16:18:08 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:08] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:18:09 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:09] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:18:10 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:10] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:18:12 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:12] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:18:12 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:12] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-10-29 HTTP/1.1" 200 - 
+27-07-2023 16:18:20 - INFO - 29/10/2023 | SML | KA01AG2055 | 700 L , Bill deleted successfully by Dealer 
+27-07-2023 16:18:20 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:20] "[32mPOST /records?party_name=SML&date1=2023-05-03&date2=2023-10-29 HTTP/1.1[0m" 302 - 
+27-07-2023 16:18:20 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:20] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:18:23 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:23] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:18:23 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:23] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:18:30 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:30] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:18:31 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:31] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:18:47 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:47] "[32mPOST /accounts/add HTTP/1.1[0m" 302 - 
+27-07-2023 16:18:47 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:47] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:18:49 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:49] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:18:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:53] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:18:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:18:53] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-10-29 HTTP/1.1" 200 - 
+27-07-2023 16:19:01 - INFO - 29/10/2023 | SML | KA1923879 | 1000 L , Bill deleted successfully by Dealer 
+27-07-2023 16:19:01 - INFO - 127.0.0.1 - - [27/Jul/2023 16:19:01] "[32mPOST /records?party_name=SML&date1=2023-05-03&date2=2023-10-29 HTTP/1.1[0m" 302 - 
+27-07-2023 16:19:01 - INFO - 127.0.0.1 - - [27/Jul/2023 16:19:01] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:19:03 - INFO - 127.0.0.1 - - [27/Jul/2023 16:19:03] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:19:03 - INFO - 127.0.0.1 - - [27/Jul/2023 16:19:03] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+27-07-2023 16:19:11 - INFO - 127.0.0.1 - - [27/Jul/2023 16:19:11] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:22:21 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:21] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:22:26 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:26] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 16:22:28 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:28] "GET /cng/ HTTP/1.1" 200 - 
+27-07-2023 16:22:29 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:29] "GET /cng/addcng HTTP/1.1" 200 - 
+27-07-2023 16:22:31 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:31] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:22:32 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:32] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:22:33 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:33] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:22:36 - INFO - 127.0.0.1 - - [27/Jul/2023 16:22:36] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:29] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:23:29 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:29] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 16:23:33 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:33] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:23:34 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:34] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:35 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:35] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:23:40 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:40] "[32mGET /logout HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:40 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:40] "GET / HTTP/1.1" 200 - 
+27-07-2023 16:23:46 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:46] "GET /login HTTP/1.1" 200 - 
+27-07-2023 16:23:47 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:47] "GET /register HTTP/1.1" 200 - 
+27-07-2023 16:23:50 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:50] "[32mGET /cng/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:50 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:50] "GET /login?next=/cng/ HTTP/1.1" 200 - 
+27-07-2023 16:23:52 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:52] "[32mGET /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:52 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:52] "GET /login?next=/accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:23:52 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:52] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:52 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:52] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:53] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:53] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:53] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:53] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:53] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:53 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:53] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:54 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:54] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:54 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:54] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:54 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:54] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:54 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:54] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:55 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:55] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:55 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:55] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:55 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:55] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:55 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:55] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 16:23:55 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:55] "[32mGET /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:55 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:55] "GET /login?next=/accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:23:57 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:57] "[32mGET /accounts/party HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:57 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:57] "GET /login?next=/accounts/party HTTP/1.1" 200 - 
+27-07-2023 16:23:57 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:57] "[32mGET /accounts/add HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:57 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:57] "GET /login?next=/accounts/add HTTP/1.1" 200 - 
+27-07-2023 16:23:59 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:59] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+27-07-2023 16:23:59 - INFO - 127.0.0.1 - - [27/Jul/2023 16:23:59] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+27-07-2023 17:37:24 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+27-07-2023 17:37:24 - INFO - [33mPress CTRL+C to quit[0m 
+27-07-2023 17:37:24 - INFO -  * Restarting with stat 
+27-07-2023 17:37:24 - WARNING -  * Debugger is active! 
+27-07-2023 17:37:24 - INFO -  * Debugger PIN: 125-351-026 
+27-07-2023 17:37:30 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:30] "GET / HTTP/1.1" 200 - 
+27-07-2023 17:37:32 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:32] "GET /login HTTP/1.1" 200 - 
+27-07-2023 17:37:37 - INFO - Dealer logged in ! 
+27-07-2023 17:37:37 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:37] "[32mPOST /login HTTP/1.1[0m" 302 - 
+27-07-2023 17:37:37 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:37] "GET /accounts/ HTTP/1.1" 200 - 
+27-07-2023 17:37:38 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:38] "GET /accounts/party HTTP/1.1" 200 - 
+27-07-2023 17:37:39 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:39] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 17:37:40 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:40] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 17:37:41 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:41] "GET /accounts/add HTTP/1.1" 200 - 
+27-07-2023 17:37:42 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:42] "GET /accounts/amtrec HTTP/1.1" 200 - 
+27-07-2023 17:37:45 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:45] "[32mGET /logout HTTP/1.1[0m" 302 - 
+27-07-2023 17:37:45 - INFO - 127.0.0.1 - - [27/Jul/2023 17:37:45] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:37:46 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+28-07-2023 19:37:46 - INFO - [33mPress CTRL+C to quit[0m 
+28-07-2023 19:37:46 - INFO -  * Restarting with stat 
+28-07-2023 19:37:46 - WARNING -  * Debugger is active! 
+28-07-2023 19:37:46 - INFO -  * Debugger PIN: 114-011-236 
+28-07-2023 19:37:52 - INFO - 127.0.0.1 - - [28/Jul/2023 19:37:52] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:37:55 - INFO - 127.0.0.1 - - [28/Jul/2023 19:37:55] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:38:22 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:22] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:38:28 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:28] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:38:41 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:41] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:41 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:41] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+28-07-2023 19:38:42 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:42] "[32mGET /accounts/party HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:42 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:42] "GET /login?next=/accounts/party HTTP/1.1" 200 - 
+28-07-2023 19:38:42 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:42] "[32mGET /accounts/add HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:42 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:42] "GET /login?next=/accounts/add HTTP/1.1" 200 - 
+28-07-2023 19:38:43 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:43] "[32mGET /accounts/amtrec HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:43 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:43] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+28-07-2023 19:38:53 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:53] "[32mGET /accounts/add HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:53 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:53] "GET /login?next=/accounts/add HTTP/1.1" 200 - 
+28-07-2023 19:38:53 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:53] "[32mGET /accounts/amtrec HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:53 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:53] "GET /login?next=/accounts/amtrec HTTP/1.1" 200 - 
+28-07-2023 19:38:54 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:54] "[32mGET /cng/ HTTP/1.1[0m" 302 - 
+28-07-2023 19:38:54 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:54] "GET /login?next=/cng/ HTTP/1.1" 200 - 
+28-07-2023 19:38:55 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:55] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:38:57 - INFO - 127.0.0.1 - - [28/Jul/2023 19:38:57] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:46:20 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+28-07-2023 19:46:20 - INFO - [33mPress CTRL+C to quit[0m 
+28-07-2023 19:46:20 - INFO -  * Restarting with stat 
+28-07-2023 19:46:20 - WARNING -  * Debugger is active! 
+28-07-2023 19:46:20 - INFO -  * Debugger PIN: 114-011-236 
+28-07-2023 19:46:28 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:28] "GET / HTTP/1.1" 200 - 
+28-07-2023 19:46:29 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:29] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+28-07-2023 19:46:29 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:29] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+28-07-2023 19:46:34 - INFO - Dealer logged in ! 
+28-07-2023 19:46:34 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:34] "[32mPOST /login?next=/accounts/ HTTP/1.1[0m" 302 - 
+28-07-2023 19:46:34 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:34] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 19:46:35 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:35] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+28-07-2023 19:46:35 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:35] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 19:46:39 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:39] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 19:46:45 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:45] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 19:46:53 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:53] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 19:46:54 - INFO - 127.0.0.1 - - [28/Jul/2023 19:46:54] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 21:05:05 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+28-07-2023 21:05:05 - INFO - [33mPress CTRL+C to quit[0m 
+28-07-2023 21:05:05 - INFO -  * Restarting with stat 
+28-07-2023 21:05:05 - WARNING -  * Debugger is active! 
+28-07-2023 21:05:05 - INFO -  * Debugger PIN: 114-011-236 
+28-07-2023 21:05:08 - INFO - 127.0.0.1 - - [28/Jul/2023 21:05:08] "GET / HTTP/1.1" 200 - 
+28-07-2023 21:05:15 - INFO - 127.0.0.1 - - [28/Jul/2023 21:05:15] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 21:05:18 - INFO - 127.0.0.1 - - [28/Jul/2023 21:05:18] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+28-07-2023 21:05:18 - INFO - 127.0.0.1 - - [28/Jul/2023 21:05:18] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:05:36 - INFO - 127.0.0.1 - - [28/Jul/2023 21:05:36] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:06:13 - INFO - 127.0.0.1 - - [28/Jul/2023 21:06:13] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:07:05 - INFO - 127.0.0.1 - - [28/Jul/2023 21:07:05] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:07:33 - INFO - 127.0.0.1 - - [28/Jul/2023 21:07:33] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:11:37 - INFO - 127.0.0.1 - - [28/Jul/2023 21:11:37] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:13:24 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+28-07-2023 21:13:24 - INFO -  * Restarting with stat 
+28-07-2023 21:13:24 - WARNING -  * Debugger is active! 
+28-07-2023 21:13:24 - INFO -  * Debugger PIN: 114-011-236 
+28-07-2023 21:13:26 - INFO - 127.0.0.1 - - [28/Jul/2023 21:13:26] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:14:06 - INFO - 127.0.0.1 - - [28/Jul/2023 21:14:06] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:14:54 - INFO - 127.0.0.1 - - [28/Jul/2023 21:14:54] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:14:59 - INFO - 127.0.0.1 - - [28/Jul/2023 21:14:59] "[32mPOST /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1[0m" 302 - 
+28-07-2023 21:14:59 - INFO - 127.0.0.1 - - [28/Jul/2023 21:14:59] "GET /print_record?partyname=SML&fromdate=2023-05-03&todate=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:14:59 - INFO - 127.0.0.1 - - [28/Jul/2023 21:14:59] "[33mGET /favicon.ico HTTP/1.1[0m" 404 - 
+28-07-2023 21:15:40 - INFO - 127.0.0.1 - - [28/Jul/2023 21:15:40] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:15:47 - INFO - 127.0.0.1 - - [28/Jul/2023 21:15:47] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:15:55 - INFO - 127.0.0.1 - - [28/Jul/2023 21:15:55] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:27:44 - INFO - 127.0.0.1 - - [28/Jul/2023 21:27:44] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:27:44 - INFO - 127.0.0.1 - - [28/Jul/2023 21:27:44] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:27:49 - INFO - 127.0.0.1 - - [28/Jul/2023 21:27:49] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:27:49 - INFO - 127.0.0.1 - - [28/Jul/2023 21:27:49] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:27:53 - INFO - 127.0.0.1 - - [28/Jul/2023 21:27:53] "[32mPOST /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1[0m" 302 - 
+28-07-2023 21:27:53 - INFO - 127.0.0.1 - - [28/Jul/2023 21:27:53] "GET /print_record?partyname=SML&fromdate=2023-05-03&todate=2023-07-24 HTTP/1.1" 200 - 
+28-07-2023 21:28:04 - INFO - 127.0.0.1 - - [28/Jul/2023 21:28:04] "GET / HTTP/1.1" 200 - 
+28-07-2023 21:28:06 - INFO - 127.0.0.1 - - [28/Jul/2023 21:28:06] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 21:28:07 - INFO - 127.0.0.1 - - [28/Jul/2023 21:28:07] "GET / HTTP/1.1" 200 - 
+28-07-2023 21:28:12 - INFO - 127.0.0.1 - - [28/Jul/2023 21:28:12] "GET /accounts/party HTTP/1.1" 200 - 
+28-07-2023 21:28:13 - INFO - 127.0.0.1 - - [28/Jul/2023 21:28:13] "GET / HTTP/1.1" 200 - 
+28-07-2023 21:29:17 - INFO - 127.0.0.1 - - [28/Jul/2023 21:29:17] "GET / HTTP/1.1" 200 - 
+28-07-2023 21:29:18 - INFO - 127.0.0.1 - - [28/Jul/2023 21:29:18] "GET / HTTP/1.1" 200 - 
+28-07-2023 21:29:20 - INFO - 127.0.0.1 - - [28/Jul/2023 21:29:20] "GET /accounts/ HTTP/1.1" 200 - 
+28-07-2023 21:29:21 - INFO - 127.0.0.1 - - [28/Jul/2023 21:29:21] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+28-07-2023 21:29:21 - INFO - 127.0.0.1 - - [28/Jul/2023 21:29:21] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 15:24:24 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+29-07-2023 15:24:24 - INFO - [33mPress CTRL+C to quit[0m 
+29-07-2023 15:24:24 - INFO -  * Restarting with stat 
+29-07-2023 15:24:24 - WARNING -  * Debugger is active! 
+29-07-2023 15:24:24 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:24:33 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:33] "GET / HTTP/1.1" 200 - 
+29-07-2023 15:24:37 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:37] "[32mGET /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 15:24:37 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:37] "GET /login?next=/accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:24:43 - INFO - Dealer logged in ! 
+29-07-2023 15:24:43 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:43] "[32mPOST /login?next=/accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 15:24:43 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:43] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:24:44 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:44] "GET / HTTP/1.1" 200 - 
+29-07-2023 15:24:44 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:44] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:24:46 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:46] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 15:24:46 - INFO - 127.0.0.1 - - [29/Jul/2023 15:24:46] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 15:25:08 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:08] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 15:25:08 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:08] "GET /records?party_name=SML&date1=2023-07-02&date2=2023-07-30 HTTP/1.1" 200 - 
+29-07-2023 15:25:25 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 15:25:25 - INFO -  * Restarting with stat 
+29-07-2023 15:25:25 - WARNING -  * Debugger is active! 
+29-07-2023 15:25:25 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:25:27 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:27] "GET /records?party_name=SML&date1=2023-07-02&date2=2023-07-30 HTTP/1.1" 200 - 
+29-07-2023 15:25:39 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:39] "GET / HTTP/1.1" 200 - 
+29-07-2023 15:25:39 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:39] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:25:40 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:40] "GET /accounts/party HTTP/1.1" 200 - 
+29-07-2023 15:25:40 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:40] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:25:40 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:40] "GET / HTTP/1.1" 200 - 
+29-07-2023 15:25:41 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:41] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:25:41 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:41] "GET / HTTP/1.1" 200 - 
+29-07-2023 15:25:43 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:43] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:25:44 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:44] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 15:25:44 - INFO - 127.0.0.1 - - [29/Jul/2023 15:25:44] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 15:34:10 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/models.py', reloading 
+29-07-2023 15:34:10 - INFO -  * Restarting with stat 
+29-07-2023 15:35:06 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+29-07-2023 15:35:06 - INFO - [33mPress CTRL+C to quit[0m 
+29-07-2023 15:35:06 - INFO -  * Restarting with stat 
+29-07-2023 15:35:07 - WARNING -  * Debugger is active! 
+29-07-2023 15:35:07 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:47:22 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 15:47:22 - INFO -  * Restarting with stat 
+29-07-2023 15:47:22 - WARNING -  * Debugger is active! 
+29-07-2023 15:47:22 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:48:07 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:07] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:48:22 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:22] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:48:24 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:24] "[35m[1mGET /balance HTTP/1.1[0m" 500 - 
+29-07-2023 15:48:24 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:24] "GET /balance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1" 200 - 
+29-07-2023 15:48:24 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:24] "GET /balance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1" 200 - 
+29-07-2023 15:48:24 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:24] "GET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1" 200 - 
+29-07-2023 15:48:24 - INFO - 127.0.0.1 - - [29/Jul/2023 15:48:24] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 15:49:23 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 15:49:23 - INFO -  * Restarting with stat 
+29-07-2023 15:49:23 - WARNING -  * Debugger is active! 
+29-07-2023 15:49:23 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:49:25 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:25] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:49:25 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:25] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:49:25 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:25] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:49:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:26] "[35m[1mGET /balance HTTP/1.1[0m" 500 - 
+29-07-2023 15:49:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:26] "[36mGET /balance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+29-07-2023 15:49:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:26] "[36mGET /balance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+29-07-2023 15:49:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:26] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 15:49:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:49:26] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 15:49:31 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 15:49:31 - INFO -  * Restarting with stat 
+29-07-2023 15:49:31 - WARNING -  * Debugger is active! 
+29-07-2023 15:49:31 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:51:24 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 15:51:24 - INFO -  * Restarting with stat 
+29-07-2023 15:51:24 - WARNING -  * Debugger is active! 
+29-07-2023 15:51:24 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:51:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:26] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:51:26 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:26] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:51:27 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:27] "[35m[1mGET /balance HTTP/1.1[0m" 500 - 
+29-07-2023 15:51:27 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:27] "[36mGET /balance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+29-07-2023 15:51:27 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:27] "[36mGET /balance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+29-07-2023 15:51:27 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:27] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 15:51:27 - INFO - 127.0.0.1 - - [29/Jul/2023 15:51:27] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 15:59:46 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 15:59:46 - INFO -  * Restarting with stat 
+29-07-2023 15:59:47 - WARNING -  * Debugger is active! 
+29-07-2023 15:59:47 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 15:59:48 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:48] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:59:48 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:48] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 15:59:48 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:48] "[35m[1mGET /balance HTTP/1.1[0m" 500 - 
+29-07-2023 15:59:48 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:48] "[36mGET /balance?__debugger__=yes&cmd=resource&f=style.css HTTP/1.1[0m" 304 - 
+29-07-2023 15:59:48 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:48] "[36mGET /balance?__debugger__=yes&cmd=resource&f=debugger.js HTTP/1.1[0m" 304 - 
+29-07-2023 15:59:48 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:48] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 15:59:49 - INFO - 127.0.0.1 - - [29/Jul/2023 15:59:49] "[36mGET /balance?__debugger__=yes&cmd=resource&f=console.png HTTP/1.1[0m" 304 - 
+29-07-2023 16:00:00 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 16:00:00 - INFO -  * Restarting with stat 
+29-07-2023 16:00:00 - WARNING -  * Debugger is active! 
+29-07-2023 16:00:00 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 16:00:01 - INFO - 127.0.0.1 - - [29/Jul/2023 16:00:01] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:00:01 - INFO - 127.0.0.1 - - [29/Jul/2023 16:00:01] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:00:01 - INFO - 127.0.0.1 - - [29/Jul/2023 16:00:01] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:00:02 - INFO - 127.0.0.1 - - [29/Jul/2023 16:00:02] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:00:40 - INFO - 127.0.0.1 - - [29/Jul/2023 16:00:40] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:02:12 - INFO - 127.0.0.1 - - [29/Jul/2023 16:02:12] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:02:25 - INFO - 127.0.0.1 - - [29/Jul/2023 16:02:25] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:02:51 - INFO - 127.0.0.1 - - [29/Jul/2023 16:02:51] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:05:11 - INFO -  * Detected change in '/Users/vijeshshetty/Desktop/Development/My Projects/GitHub/rssbuddy/rssbuddy/routes.py', reloading 
+29-07-2023 16:05:11 - INFO -  * Restarting with stat 
+29-07-2023 16:05:11 - WARNING -  * Debugger is active! 
+29-07-2023 16:05:11 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 16:05:12 - INFO - 127.0.0.1 - - [29/Jul/2023 16:05:12] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:05:13 - INFO - 127.0.0.1 - - [29/Jul/2023 16:05:13] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:05:20 - INFO - 127.0.0.1 - - [29/Jul/2023 16:05:20] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:05:22 - INFO - 127.0.0.1 - - [29/Jul/2023 16:05:22] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:05:35 - INFO - 127.0.0.1 - - [29/Jul/2023 16:05:35] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:06:42 - INFO - 127.0.0.1 - - [29/Jul/2023 16:06:42] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:18:13 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:8000 
+29-07-2023 16:18:13 - INFO - [33mPress CTRL+C to quit[0m 
+29-07-2023 16:18:13 - INFO -  * Restarting with stat 
+29-07-2023 16:18:13 - WARNING -  * Debugger is active! 
+29-07-2023 16:18:13 - INFO -  * Debugger PIN: 114-011-236 
+29-07-2023 16:20:25 - INFO - 127.0.0.1 - - [29/Jul/2023 16:20:25] "GET / HTTP/1.1" 200 - 
+29-07-2023 16:20:29 - INFO - 127.0.0.1 - - [29/Jul/2023 16:20:29] "GET /login HTTP/1.1" 200 - 
+29-07-2023 16:20:37 - INFO - Dealer logged in ! 
+29-07-2023 16:20:37 - INFO - 127.0.0.1 - - [29/Jul/2023 16:20:37] "[32mPOST /login HTTP/1.1[0m" 302 - 
+29-07-2023 16:20:37 - INFO - 127.0.0.1 - - [29/Jul/2023 16:20:37] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:20:40 - INFO - 127.0.0.1 - - [29/Jul/2023 16:20:40] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:20:43 - INFO - 127.0.0.1 - - [29/Jul/2023 16:20:43] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:21:17 - INFO - 127.0.0.1 - - [29/Jul/2023 16:21:17] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:21:18 - INFO - 127.0.0.1 - - [29/Jul/2023 16:21:18] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:22:01 - INFO - 127.0.0.1 - - [29/Jul/2023 16:22:01] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:22:05 - INFO - 127.0.0.1 - - [29/Jul/2023 16:22:05] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:24:10 - INFO - 127.0.0.1 - - [29/Jul/2023 16:24:10] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:24:11 - INFO - 127.0.0.1 - - [29/Jul/2023 16:24:11] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:24:11 - INFO - 127.0.0.1 - - [29/Jul/2023 16:24:11] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:24:11 - INFO - 127.0.0.1 - - [29/Jul/2023 16:24:11] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:26:11 - INFO - 127.0.0.1 - - [29/Jul/2023 16:26:11] "GET /balance HTTP/1.1" 200 - 
+29-07-2023 16:26:29 - INFO - 127.0.0.1 - - [29/Jul/2023 16:26:29] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:26:31 - INFO - 127.0.0.1 - - [29/Jul/2023 16:26:31] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 16:26:31 - INFO - 127.0.0.1 - - [29/Jul/2023 16:26:31] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 16:27:30 - INFO - 127.0.0.1 - - [29/Jul/2023 16:27:30] "GET /accounts/party HTTP/1.1" 200 - 
+29-07-2023 16:27:31 - INFO - 127.0.0.1 - - [29/Jul/2023 16:27:31] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:27:33 - INFO - 127.0.0.1 - - [29/Jul/2023 16:27:33] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 16:27:33 - INFO - 127.0.0.1 - - [29/Jul/2023 16:27:33] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 16:28:27 - INFO - 127.0.0.1 - - [29/Jul/2023 16:28:27] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 16:29:16 - INFO - 127.0.0.1 - - [29/Jul/2023 16:29:16] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 16:30:16 - INFO - 127.0.0.1 - - [29/Jul/2023 16:30:16] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 16:30:35 - INFO - 127.0.0.1 - - [29/Jul/2023 16:30:35] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:30:38 - INFO - 127.0.0.1 - - [29/Jul/2023 16:30:38] "GET / HTTP/1.1" 200 - 
+29-07-2023 16:30:39 - INFO - 127.0.0.1 - - [29/Jul/2023 16:30:39] "GET /accounts/ HTTP/1.1" 200 - 
+29-07-2023 16:30:42 - INFO - 127.0.0.1 - - [29/Jul/2023 16:30:42] "[32mPOST /accounts/ HTTP/1.1[0m" 302 - 
+29-07-2023 16:30:42 - INFO - 127.0.0.1 - - [29/Jul/2023 16:30:42] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 
+29-07-2023 16:31:50 - INFO - 127.0.0.1 - - [29/Jul/2023 16:31:50] "GET /records?party_name=SML&date1=2023-05-03&date2=2023-07-24 HTTP/1.1" 200 - 

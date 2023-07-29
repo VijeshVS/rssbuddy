@@ -46,6 +46,7 @@ CNG Sales
     
     {% block contents%}
       <br>
+      <h2 style="text-align: center;">CNG Sales</h1>
     <br>
     <br>
 
@@ -64,15 +65,15 @@ CNG Sales
         <tbody>
           <tr>
             {% for bill in bill_records %}
+            {% include 'includes/deleterec_modals.html' %}
             <td>{{ bill.cngdate.strftime('%d/%m/%Y') }}</td>
             <td>{{ bill.aside }} Kg</td>
             <td>{{ bill.bside }} Kg</td>
             <td>{{ bill.total }} Kg</td>
             <td>{{ bill.cngrate }} ₹</td>
             <td>{{ bill.cngamt }} ₹</td>
-            <td>
-
-            </td>
+            <td><button type="button" class="btn btn-outline-danger" data-toggle = 'modal' data-target="#Modal-deleterec-{{ bill.ID }}"> Delete </button></td>
+            
           </tr>
           {% endfor %}
 

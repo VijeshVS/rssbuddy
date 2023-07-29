@@ -13,9 +13,14 @@ logging.basicConfig(filename = 'app.log', level = logging.INFO,format = '%(ascti
 
 
 
+
+
 @app.route('/')
 def home():
     return render_template('homepage.html')
+
+
+
 
 
 @app.route('/accounts/', methods = ['GET','POST'])
@@ -58,6 +63,8 @@ def home_page():
 
 
 
+
+
 @app.route('/accounts/party',methods = ['POST','GET'])
 @login_required
 def account():
@@ -80,6 +87,9 @@ def account():
         return render_template('party.html' , optionform=optionform )
 
 
+
+
+
 @app.route('/accounts/add' , methods = ['POST','GET'])
 @login_required
 def adding_acc():
@@ -96,7 +106,10 @@ def adding_acc():
             if temp_product == 'Diesel':
                 Rate = 87.07 
             else:
-                Rate = 101.06       
+                Rate = 101.06 
+
+            if form.Rate.data:
+                Rate = form.Rate.data          
 
             created_field = Records(
                 Party = form.option_entry.data,
@@ -118,8 +131,13 @@ def adding_acc():
 
 
 
+
+
+
 @app.route('/records', methods = ['POST','GET'])
 def records():
+
+    isadmin = (current_user.username == 'admin')
 
     partyname = request.args.get('party_name')
     fromdate = request.args.get('date1')
@@ -204,17 +222,28 @@ def records():
             totalvolume += bill.Volume
             totalamount += bill.Amount
 
+        bill_records_bal = Records.query.filter_by(Party = partyname).all()
+        total_amount_bal = 0
 
-        balance = float(totalamount) - float(amt_bills_total)   
-        balance = round(balance,2)  
+        for bill in bill_records_bal:
+            total_amount_bal += bill.Amount
+            
+               
+
+        totalamount = round(totalamount,2)
+        balance = float(total_amount_bal) - float(amt_bills_total)   
+        balance = round(balance , 2)  
 
         return render_template('billrecords.html',
                             bill_records=bill_records,partyname=partyname,
                             totalvolume=totalvolume,totalamount=totalamount,
                             amt_bills_total=amt_bills_total,amt_bills=amt_bills,balance=balance,
                             deleteform=deleteform,updateform=updateform,print=print,
-                            fromdate=fromdate,todate=todate)
+                            fromdate=fromdate,todate=todate,isadmin=isadmin)
     
+
+
+
 
 @app.route('/print_record',methods = ['POST','GET'])
 def printable_page():
@@ -245,6 +274,8 @@ def printable_page():
 
     return render_template('printable_record.html',totalamount=totalamount,totalvolume=totalvolume,partyname=partyname,bill_records=bill_records,
                            fromdate=fromdate,todate=todate)    
+
+
 
 
 
@@ -302,10 +333,15 @@ def cng_home():
         cngdate2 = opform.date2.data
         temp_date1 = CNG_record.query.order_by(CNG_record.cngdate.asc()).first()
         temp_date2 = CNG_record.query.order_by(CNG_record.cngdate.desc()).first()
-        if cngdate1 == None:
-            cngdate1 = temp_date1.cngdate
-        if cngdate2 == None:
-            cngdate2 = temp_date2.cngdate
+
+        if temp_date1:
+            if cngdate1 == None:
+                cngdate1 = temp_date1.cngdate
+            if cngdate2 == None:
+                cngdate2 = temp_date2.cngdate
+        else:
+            flash(' No records found !' , category='info')
+            return redirect(url_for('cng_home'))        
         return redirect(url_for('cng_records',cngdate1=cngdate1,cngdate2=cngdate2))
         
 
@@ -314,8 +350,19 @@ def cng_home():
 
 
 
-@app.route('/cngrecords', methods = ['POST','GET'])
+@app.route('/cng/records', methods = ['POST','GET'])
 def cng_records():
+    deleteform = DeleteForm()
+
+    if request.method == 'POST':
+        bill_id = request.form.get('record_item')
+        bill_object = CNG_record.query.filter_by( ID = bill_id ).first()
+        db.session.delete(bill_object)
+        db.session.commit()
+        flash('Cng Sales deleted successfully',category='success')
+        return redirect(url_for('cng_home'))
+
+
     fromdate = request.args.get('cngdate1')
     todate = request.args.get('cngdate2')
 
@@ -325,17 +372,22 @@ def cng_records():
     # bill_records = db.session.query(Records).filter_by(Party=partyname).all()
     totalvolume=0
     totalamount=0
+
+    for bill in bill_records:
+        bill.cngamt = round(bill.cngamt , 2)
     
     for bill in bill_records:
         totalvolume += bill.total
         totalamount += bill.cngamt
 
+
+
     return render_template('cngbillrecords.html',
                            bill_records=bill_records,totalvolume=totalvolume,
-                           totalamount=totalamount)
+                           totalamount=totalamount,deleteform=deleteform)
 
 
-@app.route('/register',methods = ['POST','GET'])
+@app.route('/onlydealerregister',methods = ['POST','GET'])
 def register_page():
     registerform = RegisterForm()
     if request.method == 'POST':
@@ -365,6 +417,7 @@ def login_page():
 
 
     if request.method == 'POST' :
+        
         temp_user = User.query.filter_by(username = loginform.username.data).first()
         if temp_user and temp_user.check_password_correction(try_password=loginform.password.data):
             login_user(temp_user)
@@ -373,6 +426,7 @@ def login_page():
             return redirect(url_for('home_page'))
         else:
             flash('Incorrect username or password . Please try again' , category='danger')
+            return redirect(url_for('login_page'))
 
     if request.method == 'GET':
         return render_template('login.html',loginform=loginform)
@@ -433,5 +487,29 @@ def amt_rec_export():
 @app.route('/importrecords')
 def import_records_page():
     #Records.instantiate_from_csv()
-
+    #AmountRecord.instantiate()
     return 'Records imported successfully'
+
+@app.route('/balance')
+def balance_page():
+    bill_records = []
+    bal_list = []
+
+    for party in party_record.query.all():
+        totalamount = 0
+        balance = 0
+        amountrec = 0
+
+        for bill in Records.query.filter(Records.Party == party.name).all():
+            totalamount += bill.Amount
+            
+        for bill in AmountRecord.query.filter(AmountRecord.AmtParty == party.name).all():
+            amountrec += bill.Amount
+
+        balance = float(totalamount) - float(amountrec)
+        rounded_bal = round(balance , 2)
+        bill_records.append((party.name,rounded_bal))
+        bal_list.append(rounded_bal)
+        
+    totalbalance  = sum(bal_list)
+    return render_template('balance_records.html',bill_records=bill_records,totalbalance=totalbalance)    

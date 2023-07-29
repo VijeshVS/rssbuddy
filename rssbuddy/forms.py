@@ -1,6 +1,6 @@
 from flask_wtf import FlaskForm
-from wtforms import StringField , SubmitField , DateField , SelectField , IntegerField , FormField , FieldList , PasswordField
-from wtforms.validators import DataRequired , EqualTo 
+from wtforms import StringField , SubmitField , DateField , SelectField , IntegerField , FormField , FieldList , PasswordField , validators
+from wtforms.validators import DataRequired , EqualTo , ValidationError
 
 class EnterInfo(FlaskForm):
     Date = DateField(label = 'Date: ',validators=[DataRequired()])
@@ -25,6 +25,7 @@ class AmtRec(FlaskForm):
     Amount = StringField(label = 'Amount Received: ',validators=[DataRequired()])
     submit = SubmitField(label = 'ADD')
 
+    
 class cngform(FlaskForm):
     Date = DateField(label = 'Date: ',validators=[DataRequired()])
     aside = StringField(label = 'A side reading: ',validators=[DataRequired()])
@@ -50,8 +51,8 @@ class Print(FlaskForm):
     submit = SubmitField(label = 'View Printable Format')        
 
 class UpdateForm(FlaskForm):
-    Date = DateField(label = 'Date: ')
-    VehicleNo = StringField(label = 'Vehicle No: ')
-    Volume = StringField(label = 'Volume: ')
+    Date = DateField(label = 'Date: ', validators=[DataRequired()])
+    VehicleNo = StringField(label = 'Vehicle No: ', validators=[DataRequired()])
+    Volume = StringField(label = 'Volume: ', validators=[DataRequired()])
     product_entry = SelectField(label = 'Product' , choices=[('option1', 'Diesel') , ('option2', 'Petrol')])
     submit = SubmitField(label = 'Update')

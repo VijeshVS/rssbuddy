@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
@@ -33,12 +34,22 @@
       
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
+
             {% block homeactive %}
             <li class="nav-item ">
             {% endblock %}    
               <a class="nav-link" href="{{url_for('home')}}">
                 <i class="fa fa-home"></i>
                 Home
+                </a>
+            </li>
+
+            {% block balanceactive %}
+            <li class="nav-item ">
+            {% endblock %}    
+              <a class="nav-link" href="{{url_for('balance_page')}}">
+                <i class="fa fa-home"></i>
+                Balance
                 </a>
             </li>
             {% block accountsactive %}
@@ -116,16 +127,7 @@
                 </i>
                 Login
               </a>
-            </li>
-            {% block registeractive %}
-            <li class="nav-item ">
-            {% endblock %}   
-              <a class="nav-link" href="{{url_for('register_page')}}">
-                <i class="fa fa-globe">
-                </i>
-                Register
-              </a>
-            </li>
+            </li>  
             {% endif %}
           </ul>      
         </div>
