@@ -6,12 +6,11 @@
 {% block color %}
 <style>
    @import url('https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap');
-   
+
    body {
        color: black;
        background-color: ivory;
        font-family: 'REM', sans-serif;
-       overflow: scroll;
    }
 
    .img_logo {
@@ -19,21 +18,20 @@
        height: 100px;
        border-radius: 100px;
    }
-   
+
    table {
-      overflow: scroll;
        border-collapse: collapse;
-       width: 90%; /* Change width to 100% to make the table responsive */
+       width: 100%; /* Change width to 100% to make the table responsive */
    }
-   
+
    th, td {
        border: 1px solid black;
        padding: 8px;
    }
-   
+
    th {
        background-color: red;
-   }    
+   }
 
    .tablerec {
        width: 100%;
@@ -53,14 +51,13 @@
 
 {% endblock %}
 
-    
+
     {% block contents%}
       <br>
     <h1 style="text-align: center;" > {{ partyname }} Accounts </h1>
     <br>
     <h6 style="text-align: center;"></h6>
     <br>
-    <center>
       <table>
         <thead>
           <tr>
@@ -100,7 +97,7 @@
             <td></td>
             <td><center> <form method="POST">
               {{ print.csrf_token }}
-              {{ print.submit(class="btn btn-outline-info") }} 
+              {{ print.submit(class="btn btn-outline-info") }}
             </form>
             </center></td>
             <td style="background-color:aqua">Total</td>
@@ -114,9 +111,8 @@
           </tr>
           </tbody>
           </table>
-        </center>
 
-      
+
 
           <br>
           <br>
@@ -145,7 +141,7 @@
                 {% endif %}
               </tr>
               {% endfor %}
-    
+
               <tr>
                 <td style="background-color:aqua">Total</td>
                 <td style="background-color:aqua">{{ amt_bills_total }} ₹</td>
@@ -157,7 +153,7 @@
               </tbody>
               </table>
 
-      
+
               <br>
               <br>
               <table class="tablerec">

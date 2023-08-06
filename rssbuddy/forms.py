@@ -25,7 +25,7 @@ class AmtRec(FlaskForm):
     Amount = StringField(label = 'Amount Received: ',validators=[DataRequired()])
     submit = SubmitField(label = 'ADD')
 
-    
+
 class cngform(FlaskForm):
     Date = DateField(label = 'Date: ',validators=[DataRequired()])
     aside = StringField(label = 'A side reading: ',validators=[DataRequired()])
@@ -41,14 +41,14 @@ class LoginForm(FlaskForm):
 class RegisterForm(FlaskForm):
     username = StringField(label = 'Username: ',validators=[DataRequired()])
     password1 = PasswordField(label = 'Password: ',validators=[DataRequired()])
-    password2 = PasswordField(label = 'Confirm Password: ',validators=[DataRequired(),EqualTo('password1')])  
-    submit = SubmitField(label = 'Create Account')  
+    password2 = PasswordField(label = 'Confirm Password: ',validators=[DataRequired(),EqualTo('password1')])
+    submit = SubmitField(label = 'Create Account')
 
 class DeleteForm(FlaskForm):
-    submit = SubmitField(label = 'Delete')   
+    submit = SubmitField(label = 'Delete')
 
 class Print(FlaskForm):
-    submit = SubmitField(label = 'View Printable Format')        
+    submit = SubmitField(label = 'View Printable Format')
 
 class UpdateForm(FlaskForm):
     Date = DateField(label = 'Date: ', validators=[DataRequired()])

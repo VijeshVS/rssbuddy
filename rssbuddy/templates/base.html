@@ -31,13 +31,13 @@
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-      
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav mr-auto">
 
             {% block homeactive %}
             <li class="nav-item ">
-            {% endblock %}    
+            {% endblock %}
               <a class="nav-link" href="{{url_for('home')}}">
                 <i class="fa fa-home"></i>
                 Home
@@ -46,7 +46,7 @@
 
             {% block balanceactive %}
             <li class="nav-item ">
-            {% endblock %}    
+            {% endblock %}
               <a class="nav-link" href="{{url_for('balance_page')}}">
                 <i class="fa fa-home"></i>
                 Balance
@@ -54,7 +54,7 @@
             </li>
             {% block accountsactive %}
             <li class="nav-item ">
-            {% endblock %}   
+            {% endblock %}
               <a class="nav-link" href="{{url_for('home_page')}}">
                 <i class="fa fa-envelope-o">
                 </i>
@@ -63,7 +63,7 @@
             </li>
             {% block addpartyactive %}
             <li class="nav-item">
-            {% endblock %}   
+            {% endblock %}
               <a class="nav-link" href="{{url_for('account')}}">
                 <i class="fa fa-envelope-o">
                 </i>
@@ -72,7 +72,7 @@
             </li>
             {% block addbillactive %}
             <li class="nav-item ">
-            {% endblock %}   
+            {% endblock %}
                 <a class="nav-link" href="{{url_for('adding_acc')}}">
                   <i class="fa fa-envelope-o">
                   </i>
@@ -81,35 +81,24 @@
               </li>
               {% block amountrecactive %}
               <li class="nav-item ">
-              {% endblock %}   
+              {% endblock %}
               <a class="nav-link" href="{{url_for('amount_rec')}}">
                 <i class="fa fa-envelope-o">
                 </i>
                 Amount Received
               </a>
             </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                <i class="fa fa-envelope-o">
-                </i>
-                CNG
-              </a>
-              <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item" href="{{url_for('cng_home')}}">Accounts</a>
-                <a class="dropdown-item" href="{{url_for('add_cng')}}">Add Sales</a>
-              </div>
-            </li>
           </ul>
           {% if current_user.is_authenticated %}
           <ul class="navbar-nav ">
-            <li class="nav-item ">  
+            <li class="nav-item ">
               <a class="nav-link disabled" href="{{url_for('login_page')}}">
                 <i class="fa fa-bell">
                 </i>
                 Logged in as {{current_user.username}}
               </a>
             </li>
-            <li class="nav-item">  
+            <li class="nav-item">
                 <a class="nav-link" href="{{url_for('logout_page')}}">
                   <i class="fa fa-bell">
                   </i>
@@ -121,18 +110,18 @@
           <ul class="navbar-nav ">
             {% block loginactive %}
             <li class="nav-item ">
-            {% endblock %}   
+            {% endblock %}
               <a class="nav-link" href="{{url_for('login_page')}}">
                 <i class="fa fa-bell">
                 </i>
                 Login
               </a>
-            </li>  
+            </li>
             {% endif %}
-          </ul>      
+          </ul>
         </div>
       </nav>
-      
+
 
      <!-- navbar ends here -->
 
@@ -154,21 +143,21 @@
             height: 100px;
             border-radius: 100px;
         }
-        
+
         table {
           border-collapse: collapse;
           width: 80%;
           margin-left: 130px;
       }
-      
+
       th, td {
           border: 1px solid black;
           padding: 8px;
       }
-      
+
       th {
           background-color: red;
-      }    
+      }
 </style>
 
 {% endblock %}
@@ -196,6 +185,6 @@
     {% block contents %}
 
     {% endblock %}
-    
+
 </body>
 </html>

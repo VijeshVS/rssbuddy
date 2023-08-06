@@ -97,4 +97,3 @@ class User(db.Model , UserMixin):
 
      def __repr__(self):
           return f'{self.username} ID -> {self.id}'
-
