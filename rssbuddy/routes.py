@@ -1,8 +1,8 @@
 from rssbuddy import app
 from flask import render_template , url_for , redirect , request ,flash, get_flashed_messages , Response
-from rssbuddy.models import party_record , Records , AmountRecord , CNG_record , User
+from rssbuddy.models import party_record , Records , AmountRecord , User
 from rssbuddy import db
-from rssbuddy.forms import EnterInfo , OptionForm , AmtRec , cngform , LoginForm , RegisterForm , DeleteForm , UpdateForm , Print
+from rssbuddy.forms import EnterInfo , OptionForm , AmtRec  , LoginForm , RegisterForm , DeleteForm , UpdateForm , Print
 from datetime import datetime
 from flask_login import login_user , login_required , current_user , logout_user
 import logging

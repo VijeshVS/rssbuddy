@@ -26,13 +26,6 @@ class AmtRec(FlaskForm):
     submit = SubmitField(label = 'ADD')
 
 
-class cngform(FlaskForm):
-    Date = DateField(label = 'Date: ',validators=[DataRequired()])
-    aside = StringField(label = 'A side reading: ',validators=[DataRequired()])
-    bside = StringField(label = 'B side reading: ',validators=[DataRequired()])
-    Rate = StringField(label  = 'Rate: ')
-    submit = SubmitField(label = 'ADD')
-
 class LoginForm(FlaskForm):
     username = StringField(label = 'Username: ', validators=[DataRequired()])
     password = PasswordField(label = 'Password: ' , validators=[DataRequired()])

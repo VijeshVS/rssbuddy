@@ -64,16 +64,6 @@ class AmountRecord(db.Model):
               db.session.commit() 
                
 
-class CNG_record(db.Model): 
-      ID = db.Column(db.Integer(), primary_key=True)
-      cngdate = db.Column(db.Date(),nullable = False)
-      aside = db.Column(db.Integer(), nullable=False)
-      bside = db.Column(db.Integer(), nullable=False)
-      total = db.Column(db.Integer(), nullable=False)
-      cngrate = db.Column(db.Integer(), nullable=False)
-      cngamt = db.Column(db.Integer(), nullable=False)
-
-
 @login_manager.user_loader
 def load_user(user_id):
      return User.query.get(int(user_id))
