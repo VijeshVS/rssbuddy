@@ -6,12 +6,12 @@ from rssbuddy import login_manager
 
 class Records(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
-    Party = db.Column(db.String(length = 20), nullable=False)
+    Party = db.Column(db.String(length = 255), nullable=False)
     Date = db.Column(db.Date(), nullable=False)
-    VehicleNo = db.Column(db.String(length = 30))
+    VehicleNo = db.Column(db.String(length = 255))
     Volume = db.Column(db.Integer(), nullable=False)
     Rate = db.Column(db.Integer(), nullable=False)
-    Product = db.Column(db.String(length = 15), nullable=False)
+    Product = db.Column(db.String(length = 255), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
 
     def __repr__(self):
@@ -41,13 +41,13 @@ class Records(db.Model):
 
 class party_record(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
-    name = db.Column(db.String(length = 20))
+    name = db.Column(db.String(length = 255))
 
 class AmountRecord(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
     AmtDate = db.Column(db.Date(), nullable=False)
     Amount = db.Column(db.Integer(), nullable=False)
-    AmtParty = db.Column(db.String(length = 20), nullable=False)
+    AmtParty = db.Column(db.String(length = 255), nullable=False)
 
     @classmethod
     def instantiate(cls):
@@ -71,8 +71,8 @@ def load_user(user_id):
 
 class User(db.Model , UserMixin):
      id = db.Column(db.Integer(), primary_key = True)
-     username = db.Column(db.String(length = 20), nullable= False)
-     password_hash = db.Column(db.String(length=40), nullable = False)
+     username = db.Column(db.String(length = 255), nullable= False)
+     password_hash = db.Column(db.String(length=255), nullable = False)
 
      @property
      def password(self):
