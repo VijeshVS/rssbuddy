@@ -9,33 +9,33 @@ class Records(db.Model):
     Party = db.Column(db.String(length = 255), nullable=False)
     Date = db.Column(db.Date(), nullable=False)
     VehicleNo = db.Column(db.String(length = 255))
-    Volume = db.Column(db.Integer(), nullable=False)
-    Rate = db.Column(db.Integer(), nullable=False)
+    Volume = db.Column(db.Float(), nullable=False)
+    Rate = db.Column(db.Float(), nullable=False)
     Product = db.Column(db.String(length = 255), nullable=False)
-    Amount = db.Column(db.Integer(), nullable=False)
+    Amount = db.Column(db.Float(), nullable=False)
 
     def __repr__(self):
          return f'Date -> {self.Date} | Vehicle No -> {self.VehicleNo}'
 
-    @classmethod 
-    def instantiate_from_csv(cls):
-        from datetime import datetime
-        with open('items.csv','r') as f:
-              reader = csv.DictReader(f)
-              items = list(reader)
+#     @classmethod 
+#     def instantiate_from_csv(cls):
+#         from datetime import datetime
+#         with open('items.csv','r') as f:
+#               reader = csv.DictReader(f)
+#               items = list(reader)
               
-        for item in items:
+#         for item in items:
              
-             temp_rec = Records(Party = item.get('party'),
-                     Date = datetime.strptime(item.get('date'), '%Y-%m-%d').date(),
-                     VehicleNo = item.get('vehicleno'),                   
-                     Volume = item.get('volume'),
-                     Rate = item.get('rate'),
-                     Product = item.get('product'),
-                     Amount = item.get('amount'))
+#              temp_rec = Records(Party = item.get('party'),
+#                      Date = datetime.strptime(item.get('date'), '%Y-%m-%d').date(),
+#                      VehicleNo = item.get('vehicleno'),                   
+#                      Volume = item.get('volume'),
+#                      Rate = item.get('rate'),
+#                      Product = item.get('product'),
+#                      Amount = item.get('amount'))
              
-             db.session.add(temp_rec)
-             db.session.commit()  
+#              db.session.add(temp_rec)
+#              db.session.commit()  
 
          
 
@@ -46,22 +46,22 @@ class party_record(db.Model):
 class AmountRecord(db.Model):
     ID = db.Column(db.Integer(), primary_key=True)
     AmtDate = db.Column(db.Date(), nullable=False)
-    Amount = db.Column(db.Integer(), nullable=False)
+    Amount = db.Column(db.Float(), nullable=False)
     AmtParty = db.Column(db.String(length = 255), nullable=False)
 
-    @classmethod
-    def instantiate(cls):
-         from datetime import datetime
-         with open('items.csv','r') as f:
-              reader = csv.DictReader(f)
-              items = list(reader)
-         for item in items:
-              temp_rec = AmountRecord(AmtDate = datetime.strptime(item.get('date'), '%Y-%m-%d').date(),
-                     Amount = item.get('amount'),                   
-                     AmtParty = item.get('party'))
+#     @classmethod
+#     def instantiate(cls):
+#          from datetime import datetime
+#          with open('items.csv','r') as f:
+#               reader = csv.DictReader(f)
+#               items = list(reader)
+#          for item in items:
+#               temp_rec = AmountRecord(AmtDate = datetime.strptime(item.get('date'), '%Y-%m-%d').date(),
+#                      Amount = item.get('amount'),                   
+#                      AmtParty = item.get('party'))
               
-              db.session.add(temp_rec)
-              db.session.commit() 
+#               db.session.add(temp_rec)
+#               db.session.commit() 
                
 
 @login_manager.user_loader

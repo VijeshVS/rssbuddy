@@ -351,12 +351,6 @@ def login_page():
         return render_template('login.html',loginform=loginform)
 
 
-
-@app.route('/base')
-def base_page():
-    return render_template('base.html')
-
-
 @app.route('/logout')
 def logout_page():
     logout_user()
@@ -403,14 +397,6 @@ def amt_rec_export():
 
 
 
-@app.route('/importrecords')
-def import_records_page():
-    #Records.instantiate_from_csv()
-    #AmountRecord.instantiate()
-    return 'Records imported successfully'
-
-
-
 @app.route('/balance')
 @login_required
 def balance_page():
@@ -437,3 +423,4 @@ def balance_page():
     totalbalance = round( totalbalance , 2 )
 
     return render_template('balance_records.html',bill_records=bill_records,totalbalance=totalbalance)
+
