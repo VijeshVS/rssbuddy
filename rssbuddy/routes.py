@@ -5,14 +5,7 @@ from rssbuddy import db
 from rssbuddy.forms import EnterInfo , OptionForm , AmtRec  , LoginForm , RegisterForm , DeleteForm , UpdateForm , Print
 from datetime import datetime
 from flask_login import login_user , login_required , current_user , logout_user
-import logging
 import math
-
-# Loggining Configuration
-logging.basicConfig(filename = 'app.log', level = logging.INFO,format = '%(asctime)s - %(levelname)s - %(message)s ', datefmt = '%d-%m-%Y %H:%M:%S')
-
-
-
 
 
 @app.route('/')
@@ -154,7 +147,7 @@ def records():
             db.session.delete(bill_object)
             db.session.commit()
             date = bill_object.Date.strftime('%d/%m/%Y')
-            app.logger.info(f'{date} | {bill_object.Party} | {bill_object.VehicleNo} | {bill_object.Volume} L , Bill deleted successfully by {current_user.username}')
+            print(f'{date} | {bill_object.Party} | {bill_object.VehicleNo} | {bill_object.Volume} L , Bill deleted successfully by {current_user.username}')
             flash(f'{date} | {bill_object.Party} | {bill_object.VehicleNo} | {bill_object.Volume} L , Bill deleted successfully' , category = 'success')
             return redirect(url_for('home_page'))
 
@@ -190,7 +183,7 @@ def records():
             db.session.commit()
             date01 = billup_object.Date.strftime('%d/%m/%Y')
 
-            app.logger.info(f'Bill changed to -> {date01} | {billup_object.Party} | {billup_object.VehicleNo} | {billup_object.Volume} L , Bill updated successfully by {current_user.username}')
+            print(f'Bill changed to -> {date01} | {billup_object.Party} | {billup_object.VehicleNo} | {billup_object.Volume} L , Bill updated successfully by {current_user.username}')
 
             flash(f'Bill changed to -> {date01} | {billup_object.Party} | {billup_object.VehicleNo} | {billup_object.Volume} L , Bill updated successfully' , category = 'success')
             return redirect(url_for('home_page'))
@@ -315,7 +308,7 @@ def register_page():
         db.session.add(temp_user)
         db.session.commit()
         login_user(temp_user)
-        app.logger.info(f'{temp_user.username} registered !')
+        print(f'{temp_user.username} registered !')
         flash(f'Account created successfully !! Now you are logged in as {temp_user.username}',category='success')
         return redirect(url_for('home_page'))
 
@@ -340,7 +333,7 @@ def login_page():
         temp_user = User.query.filter_by(username = loginform.username.data).first()
         if temp_user and temp_user.check_password_correction(try_password=loginform.password.data):
             login_user(temp_user)
-            app.logger.info(f'{temp_user.username} logged in !')
+            print(f'{temp_user.username} logged in !')
             flash(f'Logged in as {temp_user.username} successfully !!', category = 'success')
             return redirect(url_for('home_page'))
         else:
