@@ -2,7 +2,7 @@
 
 <p align="center"><img src="https://socialify.git.ci/VijeshVS/rssbuddy/image?language=1&amp;owner=1&amp;name=1&amp;stargazers=1&amp;theme=Light" alt="project-image"></p>
 
-<p id="description">RSS Buddy is a user-friendly and efficient tool designed to help dealers in the trucking industry manage and track the credits provided to truck owners. The primary objective of this Flask-based web application is to streamline the process of credit management ensuring accurate and transparent tracking of bills between dealers and truck owners.</p>
+<p id="description">RSS Buddy is a user-friendly and efficient tool designed to help dealers in the petrol bunk to manage and track the credits provided to truck owners. The primary objective of this Flask-based web application is to streamline the process of credit management ensuring accurate and transparent tracking of bills between dealers and truck owners.</p>
 
   
 <h2>🧐 Features</h2>
