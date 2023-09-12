@@ -11,6 +11,7 @@ Here're some of the project's best features:
 
 *   Smooth Design
 *   User Friendly
+*   Responsive
 
 <h2>🛠️ Installation Steps:</h2>
 
