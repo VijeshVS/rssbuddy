@@ -87,3 +87,13 @@ class User(db.Model , UserMixin):
 
      def __repr__(self):
           return f'{self.username} ID -> {self.id}'
+
+class Transactions(db.Model):
+    ID = db.Column(db.Integer(), primary_key=True)
+    Date = db.Column(db.Date(), nullable=False)
+    AccType = db.Column(db.String(length = 255))
+    TransType = db.Column(db.String(length = 255))
+    Remarks = db.Column(db.String(length = 255))
+    Amount = db.Column(db.Float(), nullable=False)
+
+

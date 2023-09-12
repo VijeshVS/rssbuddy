@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+{% block color %}
+<style>
+    
+
+  table {
+    margin-top: 65px;
+    margin-left: 5vh;
+    border-collapse: collapse;
+    width: 80%;
+    padding: 10px;
+    text-align: center;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+}
+
+th {
+    background-color: red;
+}
+
+.tablerec {
+    width: 100%;
+    margin-left: 0; /* Remove left margin to center the table on mobile devices */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 768px) {
+    th, td {
+        font-size: 12px; /* Decrease font size for better readability on small screens */
+    }
+    .tablerec {
+        margin-left: 0;
+    }
+}
+</style>
+{% endblock %}
+
+<h1 style="color: red;margin-top:10px;text-align:center" >CNG Transactions</h1>
+<table>
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Transaction Type</th>
+        <th scope="col">Amount</th>
+        <th scope="col">Remarks</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for bill in trans_bills %}
+        <tr>
+        <td>{{bill.Date.strftime('%d/%m/%Y')}}</td>
+        <td>{{bill.TransType}}</td>
+        <td>{{bill.Amount}}</td>
+        <td>{{bill.Remarks}}</td>
+      </tr>
+      {% endfor %}
+
+        
+    </tbody>
+  </table>
+
+
+
+  {% endblock %}

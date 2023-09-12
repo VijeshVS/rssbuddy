@@ -1,6 +1,6 @@
 from rssbuddy import app
 from flask import render_template , url_for , redirect , request ,flash, get_flashed_messages , Response
-from rssbuddy.models import party_record , Records , AmountRecord , User
+from rssbuddy.models import party_record , Records , AmountRecord , User , Transactions
 from rssbuddy import db
 from rssbuddy.forms import EnterInfo , OptionForm , AmtRec  , LoginForm , RegisterForm , DeleteForm , UpdateForm , Print
 from datetime import datetime
@@ -29,6 +29,10 @@ def home_page():
         temp_date1 = Records.query.order_by(Records.Date.asc()).first()
         temp_date2 = Records.query.order_by(Records.Date.desc()).first()
 
+        if form.option_entry.data == 'Select the party':
+            flash('Select the party !!' , category = 'danger')
+            return redirect(url_for('home_page'))
+
         if temp_date1 :
             if date1 == None:
                 date1 = temp_date1.Date
@@ -41,6 +45,8 @@ def home_page():
 
 
         party_name = form.option_entry.data
+
+        
         check_empty = Records.query.filter_by(Party = party_name).first()
         if check_empty:
             return redirect(url_for('records', party_name=party_name,date1=date1,date2=date2))
@@ -104,6 +110,10 @@ def adding_acc():
             if form.Rate.data:
                 Rate = form.Rate.data
 
+            if form.option_entry.data == 'Select the party':
+                flash('Select the party !!' , category = 'danger')
+                return redirect(url_for('adding_acc'))    
+
             created_field = Records(
                 Party = form.option_entry.data,
                 Date = form.Date.data,
@@ -128,6 +138,7 @@ def adding_acc():
 
 
 @app.route('/records', methods = ['POST','GET'])
+@login_required
 def records():
 
     isadmin = (current_user.username == 'admin')
@@ -284,6 +295,10 @@ def amount_rec():
 
 
     if request.method == 'POST' :
+        if form.option_entry.data == 'Select the party':
+            flash('Select the party !!' , category = 'danger')
+            return redirect(url_for('amount_rec'))
+         
         temp_rec = AmountRecord(AmtDate = amt_form.Date.data ,
                           Amount = amt_form.Amount.data ,
                            AmtParty = form.option_entry.data )
@@ -302,7 +317,16 @@ def amount_rec():
 @app.route('/onlydealerregister',methods = ['POST','GET'])
 def register_page():
     registerform = RegisterForm()
+    all_users = []
+    user_obj = User.query.all()
+    for user in user_obj:
+        all_users.append(user.username)
+
     if request.method == 'POST':
+        if registerform.username.data in all_users:
+            flash('This username already exists !! Please try a different username',category='danger')
+            return redirect(url_for('register_page'))
+        
         temp_user = User( username = registerform.username.data,
                          password = registerform.password1.data)
         db.session.add(temp_user)
@@ -329,7 +353,6 @@ def login_page():
 
 
     if request.method == 'POST' :
-
         temp_user = User.query.filter_by(username = loginform.username.data).first()
         if temp_user and temp_user.check_password_correction(try_password=loginform.password.data):
             login_user(temp_user)
@@ -397,6 +420,10 @@ def balance_page():
     bal_list = []
 
     for party in party_record.query.all():
+
+        if party.name == 'Select the party':
+            continue
+
         totalamount = 0
         balance = 0
         amountrec = 0
@@ -417,3 +444,116 @@ def balance_page():
 
     return render_template('balance_records.html',bill_records=bill_records,totalbalance=totalbalance)
 
+
+
+
+# Code for balance portal
+
+@app.route('/balance_portal/balance')
+@login_required
+def balanceportal_page():
+    initial_balance = 1400000
+    cnginitial_balance = 0
+
+    dtplus_obj = Transactions.query.filter_by(AccType='MS/HSD',TransType='DT Plus')
+    dtplus_total = 0
+    for bill in dtplus_obj:
+        dtplus_total+=bill.Amount
+
+    rtgs_obj =  Transactions.query.filter_by(AccType='MS/HSD',TransType='RTGS')   
+    rtgs_total = 0
+    for bill in rtgs_obj:
+        rtgs_total+=bill.Amount
+
+    load_obj = Transactions.query.filter_by(AccType='MS/HSD',TransType='Load')  
+    load_total = 0  
+    for bill in load_obj:
+        load_total+=bill.Amount
+
+    otherplus_obj =  Transactions.query.filter_by(AccType='MS/HSD',TransType='Others (+)')   
+    otherplus_total = 0
+    for bill in otherplus_obj:
+        otherplus_total+=bill.Amount
+
+    othermin_obj =  Transactions.query.filter_by(AccType='MS/HSD',TransType='Others (-)')   
+    othermin_total = 0
+    for bill in othermin_obj:
+        othermin_total+=bill.Amount    
+
+
+    balance = initial_balance + load_total - rtgs_total - dtplus_total - othermin_total + otherplus_total   
+    balance = round(balance,2)
+
+    cngrtgs_obj =  Transactions.query.filter_by(AccType='CNG',TransType='RTGS')   
+    cngrtgs_total = 0
+    for bill in cngrtgs_obj:
+        cngrtgs_total+=bill.Amount
+
+    cngload_obj = Transactions.query.filter_by(AccType='CNG',TransType='Load')  
+    cngload_total = 0  
+    for bill in cngload_obj:
+        cngload_total+=bill.Amount
+
+    cngotherplus_obj =  Transactions.query.filter_by(AccType='CNG',TransType='Others (+)')   
+    cngotherplus_total = 0
+    for bill in cngotherplus_obj:
+        cngotherplus_total+=bill.Amount
+
+    cngothermin_obj =  Transactions.query.filter_by(AccType='CNG',TransType='Others (-)')   
+    cngothermin_total = 0
+    for bill in cngothermin_obj:
+        cngothermin_total+=bill.Amount       
+
+    cngbalance = cnginitial_balance - cngrtgs_total + cngload_total + cngotherplus_total - cngothermin_total
+    cngbalance = round(cngbalance,2)
+
+    return render_template('balanceportal.html',balance=balance,cngbalance=cngbalance)
+
+
+@app.route('/balance_portal/add',methods = ['POST','GET'])
+@login_required
+def add_transaction_page():
+    if request.method == 'POST':
+        acc_type = request.form.get('account')
+        trans_type = request.form.get('option')
+        date = request.form.get('date')
+        amount = request.form.get('amount')
+        remarks = request.form.get('remarks')
+
+        if(trans_type == 'Select the transaction type'):
+            #redirect to same page with flashes
+            print('Pls select type')
+            flash('Please select the type of transaction !! ', category='danger')
+            return redirect(url_for('add_transaction_page'))
+        
+        if(acc_type == 'Select the account type'):
+            #redirect to same page with flashes
+            print('Pls select acc type')
+            flash('Please select the type of account !! ', category='danger')
+            return redirect(url_for('add_transaction_page'))
+        
+        date = datetime.strptime(date, "%Y-%m-%d")
+        temp_object = Transactions(Date = date,AccType = acc_type,TransType = trans_type,Remarks = remarks,Amount = amount)
+        db.session.add(temp_object)
+        db.session.commit()
+        flash(f'{trans_type} transaction added to {acc_type} account successfully !!',category='success')
+        return redirect(url_for('add_transaction_page'))
+        
+        
+    if request.method == 'GET':
+        return render_template('entry.html')
+
+
+@app.route('/balance_portal/transactions')
+@login_required
+def transactions_page():
+    trans_bills = Transactions.query.filter_by(AccType = 'MS/HSD').order_by(Transactions.Date.asc())
+
+    return render_template('transactions.html',trans_bills=trans_bills)
+
+@app.route('/balance_portal/cngtransactions')
+@login_required
+def cngtransactions_page():
+    trans_bills = Transactions.query.filter_by(AccType = 'CNG').order_by(Transactions.Date.asc())
+    
+    return render_template('cngtransactions.html',trans_bills=trans_bills)

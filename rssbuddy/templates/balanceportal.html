@@ -1,0 +1,69 @@
+{% extends 'base.html' %}
+
+{% block contents %}
+
+{% block color %}
+  <style>
+    
+    .wraptablebal{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+     
+    }
+    table {
+      margin-top: 125px;
+      border-collapse: collapse;
+      width: 80%;
+      padding: 10px;
+      text-align: center;
+  }
+  
+  th, td {
+      border: 1px solid black;
+      padding: 8px;
+  }
+  
+  th {
+      background-color: red;
+  }
+  
+  .tablerec {
+      width: 100%;
+      margin-left: 0; /* Remove left margin to center the table on mobile devices */
+  }
+  
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 768px) {
+      th, td {
+          font-size: 12px; /* Decrease font size for better readability on small screens */
+      }
+      .tablerec {
+          margin-left: 0;
+      }
+  }
+  </style>
+{% endblock %}
+<div class="wraptablebal" style="flex-direction: column;">
+  <h1 style="color: red;margin-top:20px">RSS Balance Portal</h1>
+<table>
+    <thead>
+      <tr>
+        <th scope="col">MS/HSD Balance</th>
+        <td>{{balance}}</td>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <th scope="col">CNG Balance</td>
+            <td>{{cngbalance}}</td>
+      </tr>
+
+        
+    </tbody>
+  </table>
+
+</div>
+
+{% endblock %}
