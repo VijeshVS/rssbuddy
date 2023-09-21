@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Balance Records
+Today's Bills
 {% endblock %}
 
 {% block balance %}
@@ -29,10 +29,6 @@ Balance Records
        padding: 10px;
        text-align: center;
    }
-
-   th{
-    color: white;
-  }
 
    th, td {
        border: 1px solid black;
@@ -66,7 +62,7 @@ Balance Records
     <br>
     <br>
 
-    <h1 style="text-align: center;" > Balance </h1>
+    <h1 style="text-align: center;" > Today Entered Bills </h1>
     <br>
     <h6 style="text-align: center;"></h6>
     <br>
@@ -75,20 +71,23 @@ Balance Records
         <thead>
           <tr>
             <th scope="col">Party Name</th>
-            <th scope="col">Balance</th>
+            <th scope="col">Vehicle No</th>
+            <th scope="col">Volume</th>
           </tr>
         </thead>
         <tbody>
-            {% for name,balance in bill_records %}
+            {% for bill in bill_records %}
           <tr>
-            <td>{{ name }}</td>
-            <td>{{ balance }}</td>
+            <td>{{ bill.Party }}</td>
+            <td>{{ bill.VehicleNo }}</td>
+            <td>{{ bill.Volume }}</td>
           </tr>
           {% endfor %}
 
           <tr>
-            <th style="background-color: aqua;color:black" scope="col">Total</th>
-            <th style="background-color: aqua;color:black" scope="col">{{totalbalance}}</th>
+            <th style="background-color: aqua;" scope="col"></th>
+            <th style="background-color: aqua;" scope="col">Total</th>
+            <th style="background-color: aqua;" scope="col">{{totalvolume}} L</th>
           </tr>
         </tbody>
         </table>

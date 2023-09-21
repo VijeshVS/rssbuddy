@@ -13,6 +13,7 @@ class Records(db.Model):
     Rate = db.Column(db.Float(), nullable=False)
     Product = db.Column(db.String(length = 255), nullable=False)
     Amount = db.Column(db.Float(), nullable=False)
+    entertime = db.Column(db.Date())
 
     def __repr__(self):
          return f'Date -> {self.Date} | Vehicle No -> {self.VehicleNo}'
@@ -48,6 +49,7 @@ class AmountRecord(db.Model):
     AmtDate = db.Column(db.Date(), nullable=False)
     Amount = db.Column(db.Float(), nullable=False)
     AmtParty = db.Column(db.String(length = 255), nullable=False)
+    entertime = db.Column(db.Date())
 
 #     @classmethod
 #     def instantiate(cls):

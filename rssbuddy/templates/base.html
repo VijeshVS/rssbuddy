@@ -51,6 +51,17 @@
                 Balance
                 </a>
             </li>
+
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Today
+              </a>
+              <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="{{url_for('today_bills')}}">Entered Bills</a>
+                <a class="dropdown-item" href="{{url_for('today_rec')}}"> Amount Receieved</a>
+              </div>
+            </li>
+
             {% block accountsactive %}
             <li class="nav-item ">
             {% endblock %}

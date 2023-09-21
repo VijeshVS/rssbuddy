@@ -121,7 +121,8 @@ def adding_acc():
                 Volume = form.Volume.data,
                 Amount = float(form.Volume.data) * float(Rate),
                 Rate = Rate,
-                Product = temp_product
+                Product = temp_product,
+                entertime = datetime.now().date()
             )
             print(created_field.Rate)
             db.session.add(created_field)
@@ -301,7 +302,8 @@ def amount_rec():
          
         temp_rec = AmountRecord(AmtDate = amt_form.Date.data ,
                           Amount = amt_form.Amount.data ,
-                           AmtParty = form.option_entry.data )
+                           AmtParty = form.option_entry.data,
+                            entertime = datetime.now().date() )
         db.session.add(temp_rec)
         db.session.commit()
         flash(f'Amount added to {temp_rec.AmtParty} successfully !!' , category='success')
@@ -557,3 +559,30 @@ def cngtransactions_page():
     trans_bills = Transactions.query.filter_by(AccType = 'CNG').order_by(Transactions.Date.asc())
     
     return render_template('cngtransactions.html',trans_bills=trans_bills)
+
+@app.route('/today/bills')
+@login_required
+def today_bills():
+    bill_records = Records.query.filter_by(entertime = datetime.now().date()).all()
+    totalvolume = 0
+    for bill in bill_records:
+        totalvolume += bill.Volume
+
+    if bill_records:
+        return render_template('todaybill.html',bill_records=bill_records,totalvolume=totalvolume)
+    else:
+        flash('No bills have been entered today !!',category='info')
+        return redirect(url_for('balance_page'))
+    
+@app.route('/today/amtrec')
+@login_required
+def today_rec():
+    bill_records =  AmountRecord.query.filter_by( entertime = datetime.now().date()).all() 
+    totalamount = 0
+    for bill in bill_records:
+        totalamount += bill.Amount
+    if bill_records:
+        return render_template('todayrec.html',bill_records=bill_records,totalamount=totalamount)
+    else:
+        flash('No amount has been receieved today !!',category='info')
+        return redirect(url_for('balance_page'))  
