@@ -586,3 +586,28 @@ def today_rec():
     else:
         flash('No amount has been receieved today !!',category='info')
         return redirect(url_for('balance_page'))  
+    
+
+@app.route('/balance_portal/cng_profits') 
+@login_required
+def cng_profit():
+    cng_loads = Transactions.query.filter_by(AccType = 'CNG' , TransType = 'Load').all()
+    totalprofit = 0
+    bill_records = []
+
+    for load in cng_loads:
+        kg = load.Amount / 82.5
+        kg = round(kg,2)
+        profit  = kg*1.92
+        profit = round(profit,2)
+        totalprofit+=profit
+
+
+        bill_records.append((load,(profit,kg)))
+        
+    
+        
+    totalprofit = round(totalprofit,2)
+    myshare = totalprofit/2
+    myshare = round(myshare,2)
+    return render_template('cngprofit.html',cng_loads=cng_loads,myshare=myshare,totalprofit=totalprofit,bill_records=bill_records)

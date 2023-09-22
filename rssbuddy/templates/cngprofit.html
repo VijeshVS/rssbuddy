@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-Today's Bills
+CNG Profits
 {% endblock %}
 
 {% block balance %}
@@ -34,6 +34,7 @@ Today's Bills
        border: 1px solid black;
        padding: 8px;
    }
+
    th{
     color: white
    }
@@ -65,7 +66,7 @@ Today's Bills
     <br>
     <br>
 
-    <h1 style="text-align: center;" > Today Entered Bills </h1>
+    <h1 style="text-align: center;" > CNG Profits </h1>
     <br>
     <h6 style="text-align: center;"></h6>
     <br>
@@ -73,24 +74,29 @@ Today's Bills
       <table>
         <thead>
           <tr>
-            <th scope="col">Party Name</th>
-            <th scope="col">Vehicle No</th>
-            <th scope="col">Volume</th>
+            <th scope="col">Duration</th>
+            <th scope="col">Sales (in Kg)</th>
+            <th scope="col">Profits</th>
           </tr>
         </thead>
         <tbody>
-            {% for bill in bill_records %}
+            {% for bill,cng in bill_records %}
           <tr>
-            <td>{{ bill.Party }}</td>
-            <td>{{ bill.VehicleNo }}</td>
-            <td>{{ bill.Volume }}</td>
+            <td>{{ bill.Remarks }}</td>
+            <td>{{ cng[1] }}</td>
+            <td>{{ cng[0] }}</td>
           </tr>
           {% endfor %}
 
           <tr>
             <th style="background-color: aqua;color:black" scope="col"></th>
             <th style="background-color: aqua;color:black" scope="col">Total</th>
-            <th style="background-color: aqua;color:black" scope="col">{{totalvolume}} L</th>
+            <th style="background-color: aqua;color:black" scope="col">{{totalprofit}} ₹</th>
+          </tr>
+          <tr>
+            <th style="background-color: aqua;color:black" scope="col"></th>
+            <th style="background-color: aqua;color:black" scope="col">My Share</th>
+            <th style="background-color: aqua;color:black" scope="col">{{myshare}} ₹</th>
           </tr>
         </tbody>
         </table>
