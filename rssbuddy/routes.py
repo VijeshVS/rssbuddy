@@ -112,9 +112,9 @@ def adding_acc():
 
             if form.option_entry.data == 'Select the party':
                 flash('Select the party !!' , category = 'danger')
-                return redirect(url_for('adding_acc'))    
+                return redirect(url_for('adding_acc')) 
 
-            created_field = Records(
+            repeat_obj = Records.query.filter_by(
                 Party = form.option_entry.data,
                 Date = form.Date.data,
                 VehicleNo = form.VehicleNo.data,
@@ -122,12 +122,26 @@ def adding_acc():
                 Amount = float(form.Volume.data) * float(Rate),
                 Rate = Rate,
                 Product = temp_product,
-                entertime = datetime.now().date()
-            )
-            print(created_field.Rate)
-            db.session.add(created_field)
-            db.session.commit()
-            flash(f'Added bill to {created_field.Party} successfully !!',category='success')
+                entertime = datetime.now().date()).first()
+            
+            if repeat_obj:
+                flash(f'Bill has already been added !! Please check and try again !!',category='danger')
+            else:
+                created_field = Records(
+                    Party = form.option_entry.data,
+                    Date = form.Date.data,
+                    VehicleNo = form.VehicleNo.data,
+                    Volume = form.Volume.data,
+                    Amount = float(form.Volume.data) * float(Rate),
+                    Rate = Rate,
+                    Product = temp_product,
+                    entertime = datetime.now().date()
+                )
+                print(created_field.Rate)
+                db.session.add(created_field)
+                db.session.commit()
+                flash(f'Added bill to {created_field.Party} successfully !!',category='success')
+
             return redirect(url_for('adding_acc'))
 
     if request.method == 'GET':
