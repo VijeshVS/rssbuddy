@@ -103,9 +103,9 @@ def adding_acc():
                 temp_product = 'Petrol'
 
             if temp_product == 'Diesel':
-                Rate = 87.07
+                Rate = 85.11
             else:
-                Rate = 101.06
+                Rate = 98.97
 
             if form.Rate.data:
                 Rate = form.Rate.data
@@ -550,6 +550,13 @@ def add_transaction_page():
         
         date = datetime.strptime(date, "%Y-%m-%d")
         temp_object = Transactions(Date = date,AccType = acc_type,TransType = trans_type,Remarks = remarks,Amount = amount)
+
+        repeat_obj = Transactions.query.filter_by(Date = date,AccType = acc_type,TransType = trans_type,Remarks = remarks,Amount = amount).first()
+
+        if repeat_obj:
+            flash(f'Transaction has already been added!! Please check and try again!',category='danger')
+            return redirect(url_for('add_transaction_page'))
+
         db.session.add(temp_object)
         db.session.commit()
         flash(f'{trans_type} transaction added to {acc_type} account successfully !!',category='success')
