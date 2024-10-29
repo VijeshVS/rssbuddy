@@ -1,31 +1,51 @@
 pipeline {
     agent any
 
+    environment {
+        GIT_REPO_URL = 'https://github.com/VijeshVS/rssbuddy.git'
+        GIT_BRANCH = 'main'
+        IMAGE_NAME = 'rss-buddy'
+        DOCKER_CREDENTIALS = credentials('dockerHub')
+        DOCKER_REPO = "${DOCKER_CREDENTIALS_USR}/rss-buddy:latest"
+    }
+
     stages {
         stage('Pull Code') {
             steps {
-                git url: "https://github.com/VijeshVS/rssbuddy.git", branch: "main"
+                git url: env.GIT_REPO_URL, branch: env.GIT_BRANCH
             }
         }
+        
         stage('Build') {
             steps {
-                sh "docker build -t rss-buddy ."
+                sh "docker build -t ${env.IMAGE_NAME} ."
             }
         }
+        
         stage('Push Image') {
             steps {
-               withCredentials([usernamePassword(credentialsId:"dockerHub",passwordVariable:"dockerHubPass",usernameVariable:"dockerHubUser")]){
-                sh "docker tag rss-buddy ${env.dockerHubUser}/rss-buddy:latest"
-                sh "docker login -u ${env.dockerHubUser} -p ${env.dockerHubPass}"
-                sh "docker push ${env.dockerHubUser}/rss-buddy:latest"
-                sh "docker logout"
-               }
+                script {
+                    docker.withRegistry('', 'dockerHub') {
+                        sh """
+                            docker tag ${env.IMAGE_NAME} ${env.DOCKER_REPO}
+                            docker push ${env.DOCKER_REPO}
+                        """
+                    }
+                }
             }
         }
+        
         stage('Deploy Container') {
             steps {
-                echo "Deploy container......"
+                echo "Deploying container..."
+                // Add deployment logic here
             }
+        }
+    }
+
+    post {
+        always {
+            sh "docker logout"
         }
     }
 }
