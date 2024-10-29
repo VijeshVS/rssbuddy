@@ -10,9 +10,3 @@ services:
       POSTGRES_PW: ${POSTGRES_PW}
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
-    networks:
-      default:
-
-networks:
-  default:
-    external: true
