@@ -10,3 +10,13 @@ services:
       POSTGRES_PW: ${POSTGRES_PW}
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
+    networks:
+      app-network:
+        ipv4_address: 172.20.0.10
+
+networks:
+  app-network:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 172.20.0.0/24
