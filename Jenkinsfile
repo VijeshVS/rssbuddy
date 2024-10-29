@@ -22,20 +22,21 @@ pipeline {
         }
         stage('Push Image') {
             steps {
-                sh "docker tag rss-buddy ${DOCKER_REPO}"
-                sh "docker login -u ${env.DOCKER_CREDENTIALS_USR} -p ${env.DOCKER_CREDENTIALS_PSW}"
+                sh "docker tag ${env.IMAGE_NAME} ${DOCKER_REPO}"
+                sh "docker login -u ${DOCKER_CREDENTIALS_USR} -p ${DOCKER_CREDENTIALS_PSW}"
                 sh "docker push ${DOCKER_REPO}"
             }
         }
         stage('Deploy Container') {
             steps {
-                echo "Deploy container......"
+                echo "Deploy container..."
             }
         }
-        post {
+    }
+
+    post {
         always {
             sh "docker logout"
         }
-    }
     }
 }
