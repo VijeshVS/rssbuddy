@@ -12,11 +12,11 @@ services:
       POSTGRES_USER: ${POSTGRES_USER}
     networks:
       app-network:
-        ipv4_address: 172.20.0.10
+        ipv4_address: 172.30.0.10
 
 networks:
   app-network:
     driver: bridge
     ipam:
       config:
-        - subnet: 172.20.0.0/24
+        - subnet: 172.30.0.0/24
