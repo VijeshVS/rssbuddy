@@ -15,37 +15,27 @@ pipeline {
                 git url: env.GIT_REPO_URL, branch: env.GIT_BRANCH
             }
         }
-        
         stage('Build') {
             steps {
                 sh "docker build -t ${env.IMAGE_NAME} ."
             }
         }
-        
         stage('Push Image') {
             steps {
-                script {
-                    docker.withRegistry('', 'dockerHub') {
-                        sh """
-                            docker tag ${env.IMAGE_NAME} ${env.DOCKER_REPO}
-                            docker push ${env.DOCKER_REPO}
-                        """
-                    }
-                }
+                sh "docker tag rss-buddy ${DOCKER_REPO}"
+                sh "docker login -u ${env.DOCKER_CREDENTIALS_USR} -p ${env.DOCKER_CREDENTIALS_PSW}"
+                sh "docker push ${DOCKER_REPO}"
             }
         }
-        
         stage('Deploy Container') {
             steps {
-                echo "Deploying container..."
-                // Add deployment logic here
+                echo "Deploy container......"
             }
         }
-    }
-
-    post {
+        post {
         always {
             sh "docker logout"
         }
+    }
     }
 }
