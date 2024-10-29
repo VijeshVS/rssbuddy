@@ -11,12 +11,8 @@ services:
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
     networks:
-      app-network:
-        ipv4_address: 172.30.0.10
+      default:
 
 networks:
-  app-network:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 172.30.0.0/24
+  default:
+    external: true
