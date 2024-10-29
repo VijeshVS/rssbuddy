@@ -23,7 +23,7 @@ pipeline {
         stage('Push Image') {
             steps {
                 sh "docker tag ${env.IMAGE_NAME} ${DOCKER_REPO}"
-                sh "docker login -u ${DOCKER_CREDENTIALS_USR} -p ${DOCKER_CREDENTIALS_PSW}"
+                sh('docker login -u $DOCKER_CREDENTIALS_USR -p $DOCKER_CREDENTIALS_PSW')
                 sh "docker push ${DOCKER_REPO}"
             }
         }
