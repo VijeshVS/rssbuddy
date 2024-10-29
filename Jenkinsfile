@@ -6,7 +6,12 @@ pipeline {
         GIT_BRANCH = 'main'
         IMAGE_NAME = 'rss-buddy'
         DOCKER_CREDENTIALS = credentials('dockerHub')
+        RSS_BUDDY_DB = credentials('RSS_BUDDY_DB')
+        POSTGRES_URL = credentials('POSTGRES_URL')
         DOCKER_REPO = "${DOCKER_CREDENTIALS_USR}/rss-buddy:latest"
+        POSTGRES_DB = 'rssbuddy'
+        POSTGRES_PW = "${RSS_BUDDY_DB_PSW}"
+        POSTGRES_USER = "${RSS_BUDDY_DB_USR}"
     }
 
     stages {
@@ -29,7 +34,7 @@ pipeline {
         }
         stage('Deploy Container') {
             steps {
-                echo "Deploy container..."
+                echo "docker compose down && docker compose up -d"
             }
         }
     }
