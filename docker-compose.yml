@@ -1,4 +1,3 @@
-version: "3.8"
 
 services:
   web:
@@ -11,7 +10,12 @@ services:
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
     networks:
-      - nginx-proxy-manager_default
+      nginx-proxy-manager_default:
+        ipv4_address: 172.18.0.3
+
 networks:
   nginx-proxy-manager_default:
     external: true
+    ipam:
+      config:
+        - subnet: 172.18.0.0/16
