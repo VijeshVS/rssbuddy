@@ -103,9 +103,9 @@ def adding_acc():
                 temp_product = 'Petrol'
 
             if temp_product == 'Diesel':
-                Rate = 88.09
+                Rate = 88.15
             else:
-                Rate = 101.96
+                Rate = 102.02
 
             if form.Rate.data:
                 Rate = form.Rate.data
