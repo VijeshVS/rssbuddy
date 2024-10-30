@@ -11,7 +11,7 @@ services:
       POSTGRES_URL: ${POSTGRES_URL}
       POSTGRES_USER: ${POSTGRES_USER}
     networks:
-      - bridge
+      - nginx-proxy-manager_default
 networks:
-  bridge:
+  nginx-proxy-manager_default:
     external: true
