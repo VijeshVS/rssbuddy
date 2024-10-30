@@ -42,6 +42,9 @@ pipeline {
     post {
         always {
             sh "docker logout"
+            sh "docker system prune -af"
+            sh "docker volume prune -f"
+            sh "rm -rf /var/lib/docker/containers/*/*-json.log"
         }
     }
 }
