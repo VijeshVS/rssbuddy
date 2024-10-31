@@ -39,29 +39,56 @@ pipeline {
         }
     }
 
-    post {
-        always {
-            sh "docker logout"
-            sh "docker system prune -af"
-            sh "docker volume prune -f"
-            emailext (
-                subject: "Build ${currentBuild.fullDisplayName}: ${currentBuild.currentResult}",
-                body: """
-                    <p><b>Build Notification</b></p>
-                    <p><b>Project:</b> RSS Buddy</p>
-                    <p><b>Build Status:</b> ${currentBuild.currentResult}</p>
-                    <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
-                    <p><b>Branch:</b> ${GIT_BRANCH}</p>
-                    <p><b>Duration:</b> ${currentBuild.durationString}</p>
-                    <p><b>Changes:</b> ${currentBuild.changeSets.collect { it.items.collect { it.msg } }.flatten().join('<br>')}</p>
-                    <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                    <p>Attached logs, if any, can be found below.</p>
-                """,
-                mimeType: 'text/html',
-                from: 'build@vshetty.dev',
-                to: 'jenkins+vignesh@vshetty.dev',
-                attachmentsPattern: '**/*.log'
-            )
-        }
+post {
+    always {
+        sh "docker logout"
+        sh "docker system prune -af"
+        sh "docker volume prune -f"
+        emailext (
+            subject: "Build ${currentBuild.fullDisplayName}: ${currentBuild.currentResult}",
+            body: """
+                <html>
+                    <head>
+                        <style>
+                            .build-status-card {
+                                padding: 15px;
+                                border-radius: 8px;
+                                color: #ffffff;
+                                font-size: 16px;
+                                font-family: Arial, sans-serif;
+                                width: fit-content;
+                            }
+                            .success-card { background-color: #4CAF50; }
+                            .failure-card { background-color: #F44336; }
+                            .build-details { margin-top: 20px; }
+                            .footer { font-size: 14px; color: #555555; margin-top: 30px; }
+                        </style>
+                    </head>
+                    <body>
+                        <div class="build-status-card ${currentBuild.currentResult == 'SUCCESS' ? 'success-card' : 'failure-card'}">
+                            <b>Build Status:</b> ${currentBuild.currentResult}
+                        </div>
+                        <div class="build-details">
+                            <p><b>Project:</b> RSS Buddy</p>
+                            <p><b>Build Number:</b> ${env.BUILD_NUMBER}</p>
+                            <p><b>Branch:</b> ${GIT_BRANCH}</p>
+                            <p><b>Duration:</b> ${currentBuild.durationString}</p>
+                            <p><b>Changes:</b> ${currentBuild.changeSets.collect { it.items.collect { it.msg } }.flatten().join('<br>')}</p>
+                            <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
+                        </div>
+                        <div class="footer">
+                            <p>Best regards,<br><b>Jenkins</b></p>
+                            <p>Attached logs, if any, can be found below.</p>
+                        </div>
+                    </body>
+                </html>
+            """,
+            mimeType: 'text/html',
+            from: 'Jenkins <build@vshetty.dev>',
+            to: 'jenkins+vignesh@vshetty.dev',
+            attachmentsPattern: '**/*.log'
+        )
     }
+}
+
 }
