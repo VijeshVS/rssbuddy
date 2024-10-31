@@ -44,6 +44,41 @@ pipeline {
             sh "docker logout"
             sh "docker system prune -af"
             sh "docker volume prune -f"
+        // Send email if build is unsuccessful
+        failure {
+            emailext (
+                subject: "Build Failed in Jenkins: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                body: """The Jenkins build has failed.
+
+                Build details:
+                Job: ${env.JOB_NAME}
+                Build Number: ${env.BUILD_NUMBER}
+                URL: ${env.BUILD_URL}
+
+                Build Log:
+                ${BUILD_LOG, maxLines=100}""",
+                recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
+                to: "jenkins+vignesh@vshetty.dev"  // Specify the recipient(s) here
+            )
+        }
+
+        // Send email if build is successful
+        success {
+            emailext (
+                subject: "Build Success in Jenkins: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
+                body: """The Jenkins build has succeeded!
+
+                Build details:
+                Job: ${env.JOB_NAME}
+                Build Number: ${env.BUILD_NUMBER}
+                URL: ${env.BUILD_URL}
+
+                Build Log:
+                ${BUILD_LOG, maxLines=100}""",
+                recipientProviders: [[$class: 'DevelopersRecipientProvider']],
+                to: "jenkins+vignesh@vshetty.dev"  // Specify the recipient(s) here
+            )
+        }
         }
     }
 }
