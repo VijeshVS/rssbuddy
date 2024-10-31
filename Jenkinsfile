@@ -58,6 +58,7 @@ pipeline {
                     <p>Attached logs, if any, can be found below.</p>
                 """,
                 mimeType: 'text/html',
+                from: 'build@vshetty.dev',
                 to: 'jenkins+vignesh@vshetty.dev',
                 attachmentsPattern: '**/*.log'
             )
