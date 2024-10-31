@@ -50,6 +50,6 @@ pipeline {
                 to: 'jenkins+vignesh@vshetty.dev',
                 attachmentsPattern: '**/*.log'
             )
-
+        }
     }
 }
