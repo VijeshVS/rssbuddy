@@ -17,42 +17,33 @@ pipeline {
     stages {
         stage('Pull Code') {
             steps {
-                script {
-                    sh "git clone ${GIT_REPO_URL} -b ${GIT_BRANCH} > build_logs.log 2>&1"
-                }
+                git url: env.GIT_REPO_URL, branch: env.GIT_BRANCH
             }
         }
         stage('Build') {
             steps {
-                script {
-                    sh "docker build -t ${IMAGE_NAME} . >> build_logs.log 2>&1"
-                }
+                sh "docker build -t ${env.IMAGE_NAME} ."
             }
         }
         stage('Push Image') {
             steps {
-                script {
-                    sh "docker tag ${IMAGE_NAME} ${DOCKER_REPO} >> build_logs.log 2>&1"
-                    sh "docker login -u $DOCKER_CREDENTIALS_USR -p $DOCKER_CREDENTIALS_PSW >> build_logs.log 2>&1"
-                    sh "docker push ${DOCKER_REPO} >> build_logs.log 2>&1"
-                }
+                sh "docker tag ${env.IMAGE_NAME} ${DOCKER_REPO}"
+                sh('docker login -u $DOCKER_CREDENTIALS_USR -p $DOCKER_CREDENTIALS_PSW')
+                sh "docker push ${DOCKER_REPO}"
             }
         }
         stage('Deploy Container') {
             steps {
-                script {
-                    sh "docker compose down >> build_logs.log 2>&1"
-                    sh "docker compose up -d >> build_logs.log 2>&1"
-                }
+                sh "docker compose down && docker compose up -d"
             }
         }
     }
 
     post {
         always {
-            sh "docker logout >> build_logs.log 2>&1"
-            sh "docker system prune -af >> build_logs.log 2>&1"
-            sh "docker volume prune -f >> build_logs.log 2>&1"
+            sh "docker logout"
+            sh "docker system prune -af"
+            sh "docker volume prune -f"
             emailext (
                 subject: "Build ${currentBuild.fullDisplayName}: ${currentBuild.currentResult}",
                 body: """
@@ -64,11 +55,11 @@ pipeline {
                     <p><b>Duration:</b> ${currentBuild.durationString}</p>
                     <p><b>Changes:</b> ${currentBuild.changeSets.collect { it.items.collect { it.msg } }.flatten().join('<br>')}</p>
                     <p><b>Build URL:</b> <a href="${env.BUILD_URL}">${env.BUILD_URL}</a></p>
-                    <p>The full build logs are attached.</p>
+                    <p>Attached logs, if any, can be found below.</p>
                 """,
                 mimeType: 'text/html',
                 to: 'jenkins+vignesh@vshetty.dev',
-                attachmentsPattern: 'build_logs.log'
+                attachmentsPattern: '**/*.log'
             )
         }
     }
