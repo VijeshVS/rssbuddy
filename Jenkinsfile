@@ -44,44 +44,12 @@ pipeline {
             sh "docker logout"
             sh "docker system prune -af"
             sh "docker volume prune -f"
-        failure {
-            script {
-                def buildLog = currentBuild.rawBuild.getLog(100).join("\n")
-                emailext (
-                    subject: "Build Failed in Jenkins: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
-                    body: """The Jenkins build has failed.
+            emailext (
+                subject: 'Build Notification',
+                body: 'The build is complete.',
+                to: 'jenkins+vignesh@vshetty.dev',
+                attachmentsPattern: '**/*.log'
+            )
 
-                    Build details:
-                    Job: ${env.JOB_NAME}
-                    Build Number: ${env.BUILD_NUMBER}
-                    URL: ${env.BUILD_URL}
-
-                    Build Log:
-                    ${buildLog}""",
-                    recipientProviders: [[$class: 'DevelopersRecipientProvider'], [$class: 'RequesterRecipientProvider']],
-                    to: "jenkins+vignesh@vshetty.dev"
-                )
-            }
-        }
-
-        success {
-            script {
-                def buildLog = currentBuild.rawBuild.getLog(100).join("\n")
-                emailext (
-                    subject: "Build Success in Jenkins: ${env.JOB_NAME} - ${env.BUILD_NUMBER}",
-                    body: """The Jenkins build has succeeded!
-
-                    Build details:
-                    Job: ${env.JOB_NAME}
-                    Build Number: ${env.BUILD_NUMBER}
-                    URL: ${env.BUILD_URL}
-
-                    Build Log:
-                    ${buildLog}""",
-                    recipientProviders: [[$class: 'DevelopersRecipientProvider']],
-                    to: "jenkins+vignesh@vshetty.dev"
-                )
-            }
-        }
     }
 }
