@@ -37,16 +37,6 @@ pipeline {
                 sh "docker compose down && docker compose up -d"
             }
         }
-        stage('Save build log') {
-            steps {
-                script {
-                    // Save the build log to a file
-                    sh 'echo "Build log" > build.log'
-                    // Archive the build log
-                    archiveArtifacts artifacts: 'build.log', fingerprint: true
-                }
-            }
-        }
     }
 
     post {
@@ -95,8 +85,7 @@ pipeline {
                 """,
                 mimeType: 'text/html',
                 from: 'Jenkins <build@vshetty.dev>',
-                to: 'jenkins+vignesh@vshetty.dev',
-                attachmentsPattern: '**/*.log'
+                to: 'jenkins+vignesh@vshetty.dev, vijeshsshetty@gmail.com'
             )
         }
     }
