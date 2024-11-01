@@ -41,6 +41,16 @@ pipeline {
 
     post {
         always {
+            script {
+                // Capture the console log
+                def logContent = currentBuild.rawBuild.getLog(1000).join("\n") // Adjust the number of lines as needed
+
+                // Write it to a file in the workspace
+                writeFile file: 'console.log', text: logContent
+                
+                // Archive the log file as an artifact for future reference
+                archiveArtifacts artifacts: 'console.log', allowEmptyArchive: true
+            }
             sh "docker logout"
             sh "docker system prune -af"
             sh "docker volume prune -f"
@@ -85,7 +95,8 @@ pipeline {
                 """,
                 mimeType: 'text/html',
                 from: 'Jenkins <build@vshetty.dev>',
-                to: 'jenkins+vignesh@vshetty.dev, vijeshsshetty@gmail.com'
+                to: 'jenkins+vignesh@vshetty.dev, vijeshsshetty@gmail.com',
+                attachmentsPattern: '*.log'
             )
         }
     }
