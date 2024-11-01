@@ -41,14 +41,10 @@ pipeline {
 
     post {
         always {
+            sh 'rm -f *.log'
             script {
-                // Capture the console log
-                def logContent = currentBuild.rawBuild.getLog(1000).join("\n") // Adjust the number of lines as needed
-
-                // Write it to a file in the workspace
+                def logContent = currentBuild.rawBuild.getLog(1000).join("\n")
                 writeFile file: 'console.log', text: logContent
-                
-                // Archive the log file as an artifact for future reference
                 archiveArtifacts artifacts: 'console.log', allowEmptyArchive: true
             }
             sh "docker logout"
