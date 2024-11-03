@@ -1,48 +1,109 @@
 {% extends 'base.html' %}
 
+{% block contents %}
 
-{% block contents%}
+<style>
+    .wraptable {
+        color: black;
+        display: flex;
+        justify-content: center;
+        padding-top: 20px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+    .wrapper {
+        max-width: 500px;
+        width: 100%;
+        padding: 20px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        height: fit-content;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+    h2 {
+        text-align: center;
+        font-weight: bold;
+        margin-bottom: 20px;
+        color: #333;
+    }
+    label {
+        font-weight: bold;
+        color: #333;
+    }
+    select, input {
+        height: 40px;
+        padding: 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        width: 100%;
+    }
+    .btn-primary {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+        background-color: #007bff;
+        border: none;
+        border-radius: 5px;
+        transition: background-color 0.3s;
+    }
+    .btn-primary:hover {
+        background-color: #0056b3;
+    }
+    .form-text {
+        color: #6c757d;
+        font-size: 0.9em;
+    }
+</style>
 
-<div class="wraptable" style="color:black">
+<div class="wraptable">
     <div class="wrapper">
-        <form method = 'POST'>
-        
-          <div class="form-group">
-            <label for="acc">Account Type</label>
-            <select class="form-control" id="account" name = "account">
-              <option>Select the account type</option>
-              <option>MS/HSD</option>
-              <option>CNG</option>
-            </select>
-          </div>
-    <div class="form-group">
-        <div>
-            <label for="date">Date:</label>
-        <input class="form-control" type="date" id="date" name="date" required>
-        </div>
-        <br>
-        <div class="form-group">
-            <label for="trans">Transaction Type</label>
-            <select class="form-control" id="trans" name = "option">
-              <option>Select the transaction type</option>
-              <option>Load</option>
-              <option>RTGS</option>
-              <option>DT Plus</option>
-              <option>Others (+) </option>
-              <option>Others (-) </option>
-            </select>
-          </div>
-        <label for="exampleInputEmail1">Amount</label>
-        <input type="amount" name="amount" class="form-control" id="amount" aria-describedby="amount" placeholder="Enter the amount" required>
-        <small  class="form-text text-muted">Enter the amount of the transaction</small>
-<br>
-        <label for="remarks">Remarks</label>
-        <input type="remarks" name="remarks" class="form-control" id="remarks" aria-describedby="remarks" placeholder="Remarks">
-        <small  class="form-text text-muted">Enter small description about it</small>
-          <br>
-        <button type="submit" class="btn btn-primary btn-block">Add Transaction</button>
-    </form>
-      </div>
+        <h2>Add Transaction</h2>
+        <form method='POST'>
+            <div class="form-group">
+                <label for="account">Account Type</label>
+                <select class="form-control" id="account" name="account" required>
+                    <option value="" disabled selected>Select the account type</option>
+                    <option>MS/HSD</option>
+                    <option>CNG</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="date">Date</label>
+                <input type="date" id="date" name="date" class="form-control" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="trans">Transaction Type</label>
+                <select class="form-control" id="trans" name="option" required>
+                    <option value="" disabled selected>Select the transaction type</option>
+                    <option>Load</option>
+                    <option>RTGS</option>
+                    <option>DT Plus</option>
+                    <option>Others (+)</option>
+                    <option>Others (-)</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="amount">Amount</label>
+                <input type="number" id="amount" name="amount" class="form-control" placeholder="Enter the amount" required>
+                <small class="form-text">Enter the amount of the transaction</small>
+            </div>
+            
+            <div class="form-group">
+                <label for="remarks">Remarks</label>
+                <input type="text" id="remarks" name="remarks" class="form-control" placeholder="Remarks">
+                <small class="form-text">Enter a brief description</small>
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Add Transaction</button>
+            
+        </form>
     </div>
 </div>
 

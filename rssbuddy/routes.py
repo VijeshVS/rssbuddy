@@ -589,8 +589,11 @@ def cngtransactions_page():
 def today_bills():
     bill_records = Records.query.filter_by(entertime = datetime.now().date()).all()
     totalvolume = 0
+    cnt = 1
     for bill in bill_records:
         totalvolume += bill.Volume
+        bill.id = cnt
+        cnt += 1
 
     if bill_records:
         return render_template('todaybill.html',bill_records=bill_records,totalvolume=totalvolume)
