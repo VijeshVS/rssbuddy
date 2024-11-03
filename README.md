@@ -27,19 +27,30 @@ git clone https://github.com/vijeshvs/rssbuddy
 virtualenv rss
 ```
 
-<p>3. Install Required Libraries</p>
+<p>3. Activate virtualenv</p>
+
+```
+source rss/bin/activate
+```
+
+<p>4. Install Required Libraries</p>
 
 ```
 pip install -r requirements.txt
 ```
 
-<p>4. Run app</p>
+<p>5. For dev env</p>
+
+```
+pip install psycopg2-binary
+```
+
+<p>6. Run app</p>
 
 ```
 python run.py
 ```
 
-  
   
 <h2>💻 Built with</h2>
 
