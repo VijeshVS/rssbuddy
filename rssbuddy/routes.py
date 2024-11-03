@@ -237,17 +237,19 @@ def records():
         for bill in bill_records:
             bill.Amount = round(bill.Amount ,2)
 
+        cnt = 1
         for bill in bill_records:
             totalvolume += bill.Volume
             totalamount += bill.Amount
+            bill.id = cnt
+            cnt += 1
 
         bill_records_bal = Records.query.filter_by(Party = partyname).all()
         total_amount_bal = 0
 
         for bill in bill_records_bal:
             total_amount_bal += bill.Amount
-
-
+            
 
         totalamount = round(totalamount,2)
         balance = float(total_amount_bal) - float(amt_bills_total)
@@ -282,10 +284,11 @@ def printable_page():
     totalvolume=0
     totalamount=0
 
+    cnt = 1
     for bill in bill_records:
         bill.Amount = round(bill.Amount ,2)
-
-
+        bill.id = cnt
+        cnt += 1
 
     for bill in bill_records:
         totalvolume += bill.Volume

@@ -15,6 +15,7 @@ Today's Bills
        color: black;
        background-color: ivory;
        font-family: 'REM', sans-serif;
+       padding-bottom: 20px;
    }
 
    .img_logo {
@@ -77,19 +78,22 @@ Today's Bills
             <th scope="col">Party Name</th>
             <th scope="col">Vehicle No</th>
             <th scope="col">Volume</th>
+            <th scope="col">Rate</th>
           </tr>
         </thead>
         <tbody>
             {% for bill in bill_records %}
           <tr>
-            <td>{{ bill.Date }}</td>
+            <td>{{ bill.Date.strftime('%d/%m/%Y') }}</td>
             <td>{{ bill.Party }}</td>
             <td>{{ bill.VehicleNo }}</td>
             <td>{{ bill.Volume }}</td>
+            <td>{{ bill.Rate }}</td>
           </tr>
           {% endfor %}
 
           <tr>
+            <th style="background-color: aqua;color:black" scope="col"></th>
             <th style="background-color: aqua;color:black" scope="col"></th>
             <th style="background-color: aqua;color:black" scope="col"></th>
             <th style="background-color: aqua;color:black" scope="col">Total</th>

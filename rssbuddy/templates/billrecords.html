@@ -5,167 +5,194 @@
 
 {% block color %}
 <style>
-   @import url('https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap');
 
-   body {
-       color: black;
-       background-color: ivory;
-       font-family: 'REM', sans-serif;
-   }
+  body {
+    color: black;
+    background-color: ivory;
+    font-family: 'REM', sans-serif;
+  }
 
-   .img_logo {
-       width: 100px;
-       height: 100px;
-       border-radius: 100px;
-   }
+  .img_logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 100px;
+  }
 
-   table {
-       border-collapse: collapse;
-       width: 100%; /* Change width to 100% to make the table responsive */
-   }
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    /* Change width to 100% to make the table responsive */
+  }
 
-   th, td {
-       border: 1px solid black;
-       padding: 8px;
-   }
+  th,
+  td {
+    border: 1px solid black;
+    padding: 5px;
+  }
 
-   th {
-       background-color: red;
-   }
+  th {
+    background-color: red;
+  }
 
-   .tablerec {
-       width: 100%;
-       margin-left: 0; /* Remove left margin to center the table on mobile devices */
-   }
+  .tablerec {
+    width: 100%;
+    margin-left: 0;
+    /* Remove left margin to center the table on mobile devices */
+  }
 
-   /* Responsive adjustments for mobile devices */
-   @media (max-width: 768px) {
-       th, td {
-           font-size: 12px; /* Decrease font size for better readability on small screens */
-       }
-       .tablerec {
-           margin-left: 0;
-       }
-   }
+  /* Responsive adjustments for mobile devices */
+  @media (max-width: 768px) {
+
+    th,
+    td {
+      font-size: 12px;
+      /* Decrease font size for better readability on small screens */
+    }
+
+    .tablerec {
+      margin-left: 0;
+    }
+  }
+
+  .overflow-class {
+    overflow-x: scroll;
+    /* padding-left: 6px; */
+    /* padding-right: 6px; */
+    padding-bottom: 20px;
+  }
+
+  .print-btn {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+  }
 </style>
 
 {% endblock %}
 
 
-    {% block contents%}
-      <br>
-    <h1 style="text-align: center;" > {{ partyname }} Accounts </h1>
-    <br>
-    <h6 style="text-align: center;"></h6>
-    <br>
-      <table>
-        <thead>
-          <tr>
-            <th scope="col">Date</th>
-            <th scope="col">Vehicle No.</th>
-            <th scope="col">Product</th>
-            <th scope="col">Volume</th>
-            <th scope="col">Rate</th>
-            <th scope="col">Amount</th>
-            {% if isadmin %}
-            <th scope = 'col'>Actions</td>
-            {% endif %}
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            {% for bill in bill_records %}
-            {% include 'includes/deleterec_modals.html'%}
-            {% include 'includes/updaterec_modals.html'%}
-            <td>{{ bill.Date.strftime('%d/%m/%Y') }}</td>
-            <td>{{ bill.VehicleNo }}</td>
-            <td>{{ bill.Product }}</td>
-            <td>{{ bill.Volume }} L</td>
-            <td>{{ bill.Rate }} ₹</td>
-            <td>{{ bill.Amount }} ₹</td>
-            {% if isadmin %}
-            <td> <center>
-              <button type="button"   class="btn btn-outline-danger" data-toggle = 'modal' data-target="#Modal-deleterec-{{ bill.ID }}"> Delete </button>
-              <button type="button" style="margin-left: 30px;" class="btn btn-outline-success" data-toggle = 'modal' data-target="#Modal-updaterec-{{ bill.ID }}"> Update </button>
-            </center>
-            </td>
-            {% endif %}
-          </tr>
-          {% endfor %}
+{% block contents%}
+<br>
+<div class="overflow-class">
+  <h1 style="text-align: center;"> {{ partyname }} Accounts </h1>
+  <br>
+  <h6 style="text-align: center;"></h6>
+  <br>
+  <table>
+    <thead>
+      <tr>
+        <th scope="col">No.</th>
+        <th scope="col">Date</th>
+        <th scope="col">Vehicle No.</th>
+        <th scope="col">Product</th>
+        <th scope="col">Volume</th>
+        <th scope="col">Rate</th>
+        <th scope="col">Amount</th>
+        {% if isadmin %}
+        <th scope='col'>Actions</td>
+          {% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for bill in bill_records %}
+        {% include 'includes/deleterec_modals.html'%}
+        {% include 'includes/updaterec_modals.html'%}
+        <td>{{ bill.id }}</td>
+        <td>{{ bill.Date.strftime('%d/%m/%Y') }}</td>
+        <td>{{ bill.VehicleNo }}</td>
+        <td>{{ bill.Product }}</td>
+        <td>{{ bill.Volume }} L</td>
+        <td>{{ bill.Rate }} ₹</td>
+        <td>{{ bill.Amount }} ₹</td>
+        {% if isadmin %}
+        <td>
+          <center>
+            <button type="button" class="btn btn-outline-danger" data-toggle='modal'
+              data-target="#Modal-deleterec-{{ bill.ID }}"> Delete </button>
+            <button type="button" style="margin-left: 30px;" class="btn btn-outline-success" data-toggle='modal'
+              data-target="#Modal-updaterec-{{ bill.ID }}"> Update </button>
+          </center>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
 
-          <tr>
-            <td></td>
-            <td><center> <form method="POST">
-              {{ print.csrf_token }}
-              {{ print.submit(class="btn btn-outline-info") }}
-            </form>
-            </center></td>
-            <td style="background-color:aqua">Total</td>
-            <td style="background-color:aqua">{{ totalvolume }} L</td>
-            <td style="background-color:aqua"></td>
-            <td style="background-color:aqua">{{ totalamount }} ₹</td>
-            {% if isadmin %}
-            <td>
-            </td>
-            {% endif %}
-          </tr>
-          </tbody>
-          </table>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td style="background-color:aqua">Total</td>
+        <td style="background-color:aqua">{{ totalvolume }} L</td>
+        <td style="background-color:aqua"></td>
+        <td style="background-color:aqua">{{ totalamount }} ₹</td>
+        {% if isadmin %}
+        <td>
+        </td>
+        {% endif %}
+      </tr>
+    </tbody>
+  </table>
 
+  <div class="print-btn">
+    <form method="POST">
+      {{ print.csrf_token }}
+      {{ print.submit(class="btn btn-outline-info") }}
+    </form>
+  </div>
 
+  <br>
+  <br>
 
-          <br>
-          <br>
+  <table class="tablerec">
+    <thead>
+      <tr>
+        <th scope="col">Date</th>
+        <th scope="col">Amount Received</th>
+        {% if isadmin %}
+        <th scope="col">Actions</th>
+        {% endif %}
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        {% for bill in amt_bills %}
+        {% include 'includes/deleteamtrec_modals.html'%}
 
-          <table class="tablerec">
-            <thead>
-              <tr>
-                <th scope="col">Date</th>
-                <th scope="col">Amount Received</th>
-                {% if isadmin %}
-                <th scope="col">Actions</th>
-                {% endif %}
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                {% for bill in amt_bills %}
-                {% include 'includes/deleteamtrec_modals.html'%}
+        <td>{{ bill.AmtDate.strftime('%d/%m/%Y') }}</td>
+        <td>{{ bill.Amount }}</td>
+        {% if isadmin %}
+        <td>
+          <button type="button" class="btn btn-outline-danger" data-toggle='modal'
+            data-target="#Modal-deleteamtrec-{{ bill.ID }}"> Delete </button>
+        </td>
+        {% endif %}
+      </tr>
+      {% endfor %}
 
-                <td>{{ bill.AmtDate.strftime('%d/%m/%Y') }}</td>
-                <td>{{ bill.Amount }}</td>
-                {% if isadmin %}
-                <td>
-                  <button type="button"   class="btn btn-outline-danger" data-toggle = 'modal' data-target="#Modal-deleteamtrec-{{ bill.ID }}"> Delete </button>
-                </td>
-                {% endif %}
-              </tr>
-              {% endfor %}
+      <tr>
+        <td style="background-color:aqua">Total</td>
+        <td style="background-color:aqua">{{ amt_bills_total }} ₹</td>
+        {% if isadmin %}
+        <td style="background-color:aqua"></td>
+        {% endif %}
+      </tr>
 
-              <tr>
-                <td style="background-color:aqua">Total</td>
-                <td style="background-color:aqua">{{ amt_bills_total }} ₹</td>
-                {% if isadmin %}
-                <td style="background-color:aqua"></td>
-                {% endif %}
-              </tr>
-
-              </tbody>
-              </table>
-
-
-              <br>
-              <br>
-              <table class="tablerec">
-                <thead>
-                  <tr>
-                    <th style="background-color: yellow;" scope="col">Total Balance</th>
-                    <th style="background-color: yellow;" scope="col"> {{balance}} ₹</th>
-                  </tr>
-                </thead>
-                </table>
+    </tbody>
+  </table>
 
 
-    {% endblock %}
+  <br>
+  <br>
+  <table class="tablerec">
+    <thead>
+      <tr>
+        <th style="background-color: yellow;" scope="col">Total Balance</th>
+        <th style="background-color: yellow;" scope="col"> {{balance}} ₹</th>
+      </tr>
+    </thead>
+  </table>
 
-
+</div>
+{% endblock %}
