@@ -250,10 +250,10 @@ def records():
         for bill in bill_records_bal:
             total_amount_bal += bill.Amount
             
-
+        totalvolume = round(totalvolume,2)
         totalamount = round(totalamount,2)
         balance = float(total_amount_bal) - float(amt_bills_total)
-        balance = round(balance , 2)
+        balance = round(balance,2)
 
         return render_template('billrecords.html',
                             bill_records=bill_records,partyname=partyname,
@@ -294,7 +294,8 @@ def printable_page():
         totalvolume += bill.Volume
         totalamount += bill.Amount
 
-    totalamount = round( totalamount , 2 )
+    totalamount = round(totalamount,2)
+    totalvolume = round(totalvolume,2)
 
     return render_template('printable_record.html',totalamount=totalamount,totalvolume=totalvolume,partyname=partyname,bill_records=bill_records,
                            fromdate=fromdate,todate=todate)
