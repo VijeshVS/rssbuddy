@@ -103,7 +103,7 @@ def adding_acc():
                 temp_product = 'Petrol'
 
             if temp_product == 'Diesel':
-                Rate = 88.15
+                Rate = 90.13
             else:
                 Rate = 102.02
 
